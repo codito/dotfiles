@@ -1,6 +1,6 @@
 ## Screen config
 ## Created: Late 2007
-## Last Modified: Mon 05 Jan 2009 07:36:03 PM IST
+## Last Modified: Fri 27 Mar 2009 04:45:49 PM IST
 
 ## Hardstatus stuff
 #change the hardstatus settings to give an window list at the bottom of the
@@ -43,7 +43,7 @@ pow_detach_msg "Screen session of \$LOGNAME \$:cr:\$:nl:ended."
 # shell -$SHELL
 
 ## the shell title should display the job running
-shelltitle "$ |zsh"
+shelltitle "$ |bash"
 
 ## set every new windows hardstatus line to something descriptive
 defhstatus "screen: ^En (^Et)"
@@ -63,7 +63,6 @@ altscreen on
 ##
 ## keybindings
 ##
-#
 ##remove some stupid / dangerous key bindings
 bind k
 bind ^k
@@ -105,4 +104,3 @@ screen -t irssi 2 irssi
 ## defnonblock 1
 ## blankerprg rain -d 100
 ## idle 30 blanker
-

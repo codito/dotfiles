@@ -1,32 +1,34 @@
-# Some applications read the EDITOR variable to determine your favourite text
-# editor. So uncomment the line below and enter the editor of your choice :-)
+#
+# Bash config
+# Created: Aug 2005
+# Last Modified: Sat 28 Mar 2009 02:49:37 AM IST
+#
+
+## Pure bash {{{1
+# Appearance {{{2
+export PS1='\[\033k\033\\\][\u@\h \w]\n\# \$ '
+
+# Completion {{{2
+if [-f /etc/bash_completion ]
+then
+    . /etc/bash_completion
+fi
+
+shopt -s cdspell    # correct cs misspells
+shopt -s extglob    # extra pattern matching @ ?,*,+,@,!
+
+## Globals {{{1
+# Env variables {{{2
+PATH=$PATH:~/bin
+CDPATH=$CDPATH:~/src:~/tmp
 export EDITOR=/usr/bin/vim
 
-# Shell display
-#PS1='[\u@\h \W]\$ '
-export PS1='\[\033k\033\\\][\u@\h \W]\$ '
-
-# My Aliases
+# Aliases {{{2
 alias ls="ls --color=auto"
 alias l="ls --color=auto"
 alias ll="ls --color=auto -lh"
 alias cd..="cd .."
 alias md="mkdir"
-#alias wget="/usr/bin/wget --http-user='04it06' --http-password='papulu98445'"
 
-PATH=$PATH:/usr/local/bin:/home/arun/bin:/opt/kde/bin:/opt/kdemod/bin
-ANT_HOME="/usr/java/ant-1.7.0"
-JRE_HOME="/opt/java/jre"
-JAVA_HOME="/opt/java"
-JAVA_FONTS="/usr/share/fonts/truetype"
-export JAVA_HOME
-export JAVA_FONTS
-export PATH
-export JRE_HOME
-export ANT_HOME
-export CLASSPATH=.
-
-PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/e17/lib/pkgconfig:"/usr/local/lib/pkgconfig"
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/e17/lib:"/usr/local/lib"
-export PKG_CONFIG_PATH
-export LD_LIBRARY_PATH
+# vim: fdm=marker
+# EOF

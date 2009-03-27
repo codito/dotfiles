@@ -1,13 +1,14 @@
 !
 ! Default config for X
 ! Created: Sun 24 Feb 2008 05:44:57 PM IST
-! Last Modified : ଶକର 13 2 2009 07:00:27 AM IST
+! Last Modified : Fri 27 Mar 2009 04:39:00 PM IST
+!
 
 !! defaults for XMessage
 xmessage*maxWidth:  400
 xmessage*maxHeight: 200
 
-!! defaults for xterm
+!! defaults for XTerm
 xterm*foreground:   white
 xterm*background:   black
 xterm*color0:      black
@@ -27,12 +28,12 @@ xterm*color13:      !cf9ebe
 xterm*color14:      !71bebe
 xterm*color15:      white
 
-! Xft
+!! Xft
 xft*dpi:	96
 xft*antialias:	true
 xft*hinting:	full
 
-!! urxvt config
+!! Urxvt config
 urxvt*termName: rxvt
 ! colors
 urxvt*background:  rgba:0000/0000/0000/dddd
@@ -71,12 +72,11 @@ urxvt*pointerBlank:	true
 !urxvt*lineSpace:        1
 !urxvt*font:             xft:terminus:size=5;antialias=true
 urxvt*font:             xft:inconsolata:size=10;antialias=true
-!urxvt*font:             xft:ori1Uni:size=8;antialias=true
 !urxvt*font:             xft:DejaVu Sans Mono:size=10:antialias=true
 !urxvt*font:		 xft:Bitstream Vera Sans Mono:size=9:antialias=true
 !urxvt*boldFont:         xft:inconsolata:size=10
 
-! Misc
+! misc
 ! urxvt*loginShell:       true
 urxvt*saveLines:        10000
 urxvt.matcher.button:       1
@@ -119,61 +119,61 @@ urxvt*color7:           #ffffff
 urxvt*color15:          #dedede
 
 !# Greenish theme
-!*color0:       #000000
-!*color8:       #666666
+!urxvt*color0:       #000000
+!urxvt*color8:       #666666
 !## DarkRed + Red
-!*color1:       #b45151
-!*color9:       #fe8686
+!urxvt*color1:       #b45151
+!urxvt*color9:       #fe8686
 !## DarkGreen + Green
-!*color2:       #8ba574
-!*color10:      #a5dca5
+!urxvt*color2:       #8ba574
+!urxvt*color10:      #a5dca5
 !## DarkYellow + Yellow
-!*color3:       Khaki3
-!*color11:      #efe58b
+!urxvt*color3:       Khaki3
+!urxvt*color11:      #efe58b
 !## DarkBlue + Blue
-!*color4:       #2797d8
-!*color12:      #86cdea
+!urxvt*color4:       #2797d8
+!urxvt*color12:      #86cdea
 !## DarkMangenta + Mangenta
-!*color5:       #aa6eaf
-!*color13:      #b698b8
+!urxvt*color5:       #aa6eaf
+!urxvt*color13:      #b698b8
 !##DarkCyan + Cyan
-!*color6:       #418179
-!*color14:      #71bebe
+!urxvt*color6:       #418179
+!urxvt*color14:      #71bebe
 !## LightGrey + White
-!*color7:       #bebebe
-!*color15:      #ffffff
+!urxvt*color7:       #bebebe
+!urxvt*color15:      #ffffff
 
 !# Light theme, for crappy CRTs
-!*color0:    #000000
-!*color8:    #000054
-!*color1:    #A80000
-!*color9:    #AA0054
-!*color2:    #00A800
-!*color10:   #00AA54
-!*color3:    #A8A800
-!*color11:   #AAAA54
-!*color4:    #0000A8
-!*color12:   #0055CC
-!*color5:    #A800A8
-!*color13:   #AA00AA
-!*color6:    #00A8A8
-!*color14:   #00AAAA
-!*color7:    #A8A8A8
-!*color15:   #AAAAAA
+!urxvt*color0:    #000000
+!urxvt*color8:    #000054
+!urxvt*color1:    #A80000
+!urxvt*color9:    #AA0054
+!urxvt*color2:    #00A800
+!urxvt*color10:   #00AA54
+!urxvt*color3:    #A8A800
+!urxvt*color11:   #AAAA54
+!urxvt*color4:    #0000A8
+!urxvt*color12:   #0055CC
+!urxvt*color5:    #A800A8
+!urxvt*color13:   #AA00AA
+!urxvt*color6:    #00A8A8
+!urxvt*color14:   #00AAAA
+!urxvt*color7:    #A8A8A8
+!urxvt*color15:   #AAAAAA
 
-!URxvt*color0:      black
-!URxvt*color1:      #40e0d0
-!URxvt*color2:      #87cefa
-!URxvt*color3:      #ffff00
-!URxvt*color4:      #d1eeee
-!URxvt*color5:      #eed8ae
-!URxvt*color6:      #b4eeb4
-!URxvt*color7:      gray
-!URxvt*color8:      gray40
-!URxvt*color9:      #ee6363
-!URxvt*color10:      #c5f779
-!URxvt*color11:      #fff796
-!URxvt*color12:      #00b2ee
-!URxvt*color13:      #cf9ebe
-!URxvt*color14:      #71bebe
-!URxvt*color15:      white
+!urxvt*color0:      black
+!urxvt*color1:      #40e0d0
+!urxvt*color2:      #87cefa
+!urxvt*color3:      #ffff00
+!urxvt*color4:      #d1eeee
+!urxvt*color5:      #eed8ae
+!urxvt*color6:      #b4eeb4
+!urxvt*color7:      gray
+!urxvt*color8:      gray40
+!urxvt*color9:      #ee6363
+!urxvt*color10:      #c5f779
+!urxvt*color11:      #fff796
+!urxvt*color12:      #00b2ee
+!urxvt*color13:      #cf9ebe
+!urxvt*color14:      #71bebe
+!urxvt*color15:      white
