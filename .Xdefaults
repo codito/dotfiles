@@ -1,0 +1,179 @@
+!
+! Default config for X
+! Created: Sun 24 Feb 2008 05:44:57 PM IST
+! Last Modified : ଶକର 13 2 2009 07:00:27 AM IST
+
+!! defaults for XMessage
+xmessage*maxWidth:  400
+xmessage*maxHeight: 200
+
+!! defaults for xterm
+xterm*foreground:   white
+xterm*background:   black
+xterm*color0:      black
+xterm*color1:      !40e0d0
+xterm*color2:      !87cefa
+xterm*color3:      !ffff00
+xterm*color4:      !d1eeee
+xterm*color5:      !eed8ae
+xterm*color6:      !b4eeb4
+xterm*color7:      gray
+xterm*color8:      gray40
+xterm*color9:      !ee6363
+xterm*color10:      !c5f779
+xterm*color11:      !fff796
+xterm*color12:      !00b2ee
+xterm*color13:      !cf9ebe
+xterm*color14:      !71bebe
+xterm*color15:      white
+
+! Xft
+xft*dpi:	96
+xft*antialias:	true
+xft*hinting:	full
+
+!! urxvt config
+urxvt*termName: rxvt
+! colors
+urxvt*background:  rgba:0000/0000/0000/dddd
+!urxvt*background:  #000000
+urxvt*foreground:  #FFFFFF
+
+! scroll
+urxvt*secondaryScroll:  true
+urxvt*scrollBar_right:	false
+urxvt*scrollBar:	false
+
+! borders
+urxvt*borderWidth:	0
+urxvt*borderLess:	false
+urxvt*externalBorder:   0
+urxvt*internalBorder:   0
+
+! transparency
+!urxvt*inheritPixmap:	true
+!urxvt*backgroundPixmap: "/home/arun/pics/Wallpapers/clean/55700-Kore - Default.png"
+!urxvt*geometry:		140x60
+!urxvt*tintColor:        black
+urxvt*fadeColor:        black
+urxvt*fading:           1
+urxvt*depth:            32
+urxvt*shading:		20
+urxvt*transparency:	true
+
+! cursor and pointer
+urxvt*cursorColor:      lightgreen
+urxvt*cursorBlink:      false
+urxvt*pointerBlank:	true
+
+! font
+!urxvt*font:		-*-dina-medium-r-normal-*-12-*-*-*-*-*-*-*
+!urxvt*lineSpace:        1
+!urxvt*font:             xft:terminus:size=5;antialias=true
+urxvt*font:             xft:inconsolata:size=10;antialias=true
+!urxvt*font:             xft:ori1Uni:size=8;antialias=true
+!urxvt*font:             xft:DejaVu Sans Mono:size=10:antialias=true
+!urxvt*font:		 xft:Bitstream Vera Sans Mono:size=9:antialias=true
+!urxvt*boldFont:         xft:inconsolata:size=10
+
+! Misc
+! urxvt*loginShell:       true
+urxvt*saveLines:        10000
+urxvt.matcher.button:       1
+urxvt.matcher.pattern.1:    \bwww\.[\w-]\.[\w./?&@!-]*[\w/-]
+urxvt*urlLauncher:        opera -newtab
+urxvt.perl-ext-common:      default,matcher
+
+
+!# Theme 1
+!black text
+urxvt*color0:           #242424
+urxvt*color8:           #cdb5cd
+!
+!red text
+urxvt*color1:           #bf7979
+urxvt*color9:           #f4a45f
+!
+!green text
+urxvt*color2:           #97b26b
+urxvt*color10:          #c5f779
+!
+!yellow text
+urxvt*color3:           #cdcda1
+urxvt*color11:          #ffffaf
+!
+!blue text
+urxvt*color4:           #86a2be
+urxvt*color12:          #98afd9
+!
+!magenta text
+urxvt*color5:           #d9b798
+urxvt*color13:          #d7d998
+!
+!cyan text
+urxvt*color6:           #a1b5cd
+urxvt*color14:          #a1b5cd
+!
+!white
+urxvt*color7:           #ffffff
+urxvt*color15:          #dedede
+
+!# Greenish theme
+!*color0:       #000000
+!*color8:       #666666
+!## DarkRed + Red
+!*color1:       #b45151
+!*color9:       #fe8686
+!## DarkGreen + Green
+!*color2:       #8ba574
+!*color10:      #a5dca5
+!## DarkYellow + Yellow
+!*color3:       Khaki3
+!*color11:      #efe58b
+!## DarkBlue + Blue
+!*color4:       #2797d8
+!*color12:      #86cdea
+!## DarkMangenta + Mangenta
+!*color5:       #aa6eaf
+!*color13:      #b698b8
+!##DarkCyan + Cyan
+!*color6:       #418179
+!*color14:      #71bebe
+!## LightGrey + White
+!*color7:       #bebebe
+!*color15:      #ffffff
+
+!# Light theme, for crappy CRTs
+!*color0:    #000000
+!*color8:    #000054
+!*color1:    #A80000
+!*color9:    #AA0054
+!*color2:    #00A800
+!*color10:   #00AA54
+!*color3:    #A8A800
+!*color11:   #AAAA54
+!*color4:    #0000A8
+!*color12:   #0055CC
+!*color5:    #A800A8
+!*color13:   #AA00AA
+!*color6:    #00A8A8
+!*color14:   #00AAAA
+!*color7:    #A8A8A8
+!*color15:   #AAAAAA
+
+!URxvt*color0:      black
+!URxvt*color1:      #40e0d0
+!URxvt*color2:      #87cefa
+!URxvt*color3:      #ffff00
+!URxvt*color4:      #d1eeee
+!URxvt*color5:      #eed8ae
+!URxvt*color6:      #b4eeb4
+!URxvt*color7:      gray
+!URxvt*color8:      gray40
+!URxvt*color9:      #ee6363
+!URxvt*color10:      #c5f779
+!URxvt*color11:      #fff796
+!URxvt*color12:      #00b2ee
+!URxvt*color13:      #cf9ebe
+!URxvt*color14:      #71bebe
+!URxvt*color15:      white

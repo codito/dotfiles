@@ -1,0 +1,88 @@
+#
+# Configuration for Mutt - Next Generation
+# Created : Tue 26 Feb 2008 10:37:48 PM IST
+# Last Modified : Fri 09 Jan 2009 08:00:57 AM IST
+#
+
+# Variables
+set mbox_type=maildir
+set print_command="/bin/false"
+set sendmail="/usr/bin/msmtp"
+set mailcap_path="~/.mutt/mailcap"
+
+set sidebar_visible=yes
+set sidebar_width=25
+set sidebar_shorten_hierarchy=yes
+
+set allow_8bit=yes
+set copy=yes
+set delete=yes
+set edit_headers=yes
+set fast_reply=no
+set followup_to=yes
+set use_envelope_from=yes
+set read_inc=20
+set move=no
+
+set pager_index_lines=7
+set pager_stop
+
+set editor="vim -c 'set ft=mail'"
+set query_command="/usr/bin/lbdbq '%s'"
+set smileys="(>From)|(:[-^]?[][)(><}{|/DP])"
+
+set header_cache=~/.mutt/hcache
+set message_cachedir="~/.mutt/msgcache/"
+set certificate_file=~/.mutt/certs 
+
+set realname="Arun"
+set from="pratikarun@gmail.com"
+set metoo="yes"
+set signature="~/.mutt/signature"
+
+set sort=threads
+set sort_aux=reverse-date
+
+set send_charset="utf8"
+set charset="utf8"
+
+set autoedit
+ignore *
+unignore Subject From To Date User-Agent X-Mailer Sender X-OS
+hdr_order Subject From To Date User-Agent X-Mailer Sender X-OS
+
+# Alternate ids
+alternates (pratikarun@gmail\.com|arun@codito\.in|codito@codito\.in)
+alternative_order text/enriched text/plain text/html
+
+# Aliases : Alt Email Ids
+set alias_file="~/.mutt/aliases"
+source ~/.mutt/aliases
+
+# Bindings
+source ~/.mutt/bindings
+
+# Colors
+#source ~/.mutt/colors256
+source ~/.mutt/colors
+
+# GNU PG Stuff
+#source ~/.mutt/gpg.rc
+
+# Macros
+source ~/.mutt/macros
+
+# My mailboxes
+source ~/.mutt/folders
+
+# Hooks : 
+source ~/.mutt/hooks
+
+# Mailing lists
+source ~/.mutt/lists
+
+# News
+source ~/.mutt/news
+
+# vim: ft=muttrc
+# EOF
