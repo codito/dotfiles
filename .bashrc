@@ -1,7 +1,7 @@
 #
 # Bash config
 # Created: Aug 2005
-# Last Modified: Sat 28 Mar 2009 02:49:37 AM IST
+# Last Modified: Sat 28 Mar 2009 01:53:37 PM IST
 #
 
 ## Pure bash {{{1
@@ -9,7 +9,7 @@
 export PS1='\[\033k\033\\\][\u@\h \w]\n\# \$ '
 
 # Completion {{{2
-if [-f /etc/bash_completion ]
+if [ -f /etc/bash_completion ]
 then
     . /etc/bash_completion
 fi
