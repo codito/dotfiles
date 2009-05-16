@@ -1,6 +1,6 @@
 " GVim config
 " Created: Aug 2005
-" Last Modified: Fri 27 Mar 2009 07:37:02 PM IST
+" Last Modified: Tue 31 Mar 2009 01:52:21 AM IST
 "
 
 " Window Appearance {{{1
@@ -22,7 +22,7 @@ colorscheme sienna
 
 " Pure gvim {{{1
 "
-set lines=80
+"set lines=80
 
 " Key bindings {{{1
 "

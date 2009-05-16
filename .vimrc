@@ -4,6 +4,9 @@
 
 " Platform related {{{1
 "
+" Local settings file, default to linux
+let localFile = "~/.local.vim"
+
 " Know the platform we're running on
 function GetPlatform()
     if has("win32") || has("win64")
@@ -15,7 +18,7 @@ endfunction
     
 " Get ready for life w/o walls
 if GetPlatform() == "win"
-    source ~/netcf.vim
+    localFile = "~\local.vim"
     source $VIMRUNTIME/mswin.vim
     behave mswin
 endif
@@ -69,9 +72,7 @@ set tabstop=8               " defacto tab standard
 
 " Tags {{{2
 set sft                     " show full tags while autocompleting
-set tags=tags;../..
-" Ctags DB for Omnicppcomplete
-map <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+set tags=tags,../..
 
 " Misc {{{2
 filetype plugin on          " enable plugin support
@@ -92,6 +93,7 @@ imap <silent><F12> :cn<cr>
 
 " C/C++ {{{2
 au FileType cc,cpp setlocal tags+=~/.vim/tags/cpptags
+au FileType cc,cpp map <F8> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 " C# {{{2
 " Folding : http://vim.wikia.com/wiki/Syntax-based_folding, see comment by Ostrygen
@@ -104,6 +106,8 @@ au FileType cs set foldlevelstart=2
 if GetPlatform() == "win"
     au FileType cs set errorformat=\ %#%f(%l\\\,%c):\ error\ CS%n:\ %m
 endif
+" C# tags
+au FileType cs map <F8> :!ctags --recurse --extra=+fq --fields=+ianmzS --c\#-kinds=cimnp .<CR>
 
 " Mail {{{2
 autocmd BufNewFile,BufRead /tmp/mutt-* set filetype=mail
@@ -176,6 +180,12 @@ nnoremap <silent><C-Left> :<C-u>cal search('\<\<Bar>\%(^\<Bar>[^'.g:camelchar.']
 nnoremap <silent><C-Right> :<C-u>cal search('\<\<Bar>\%(^\<Bar>[^'.g:camelchar.']\@<=\)['.g:camelchar.']\<Bar>['.g:camelchar.']\ze\%([^'.g:camelchar.']\&\>\@!\)\<Bar>\%$','W')<CR>
 inoremap <silent><C-Left> <C-o>:cal search('\<\<Bar>\%(^\<Bar>[^'.g:camelchar.']\@<=\)['.g:camelchar.']\<Bar>['.g:camelchar.']\ze\%([^'.g:camelchar.']\&\>\@!\)\<Bar>\%^','bW')<CR>
 inoremap <silent><C-Right> <C-o>:cal search('\<\<Bar>\%(^\<Bar>[^'.g:camelchar.']\@<=\)['.g:camelchar.']\<Bar>['.g:camelchar.']\ze\%([^'.g:camelchar.']\&\>\@!\)\<Bar>\%$','W')<CR>
+
+" Local machine dependent mods {{{1
+"
+if filereadable(localFile)
+    source localFile
+endif
 
 " vim: foldmethod=marker
 " EOF
