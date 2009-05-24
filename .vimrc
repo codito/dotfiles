@@ -1,11 +1,11 @@
 " VIM config file
-" Created : Aug 2005
-" Last Modified : Fri 27 Mar 2009 07:11:28 PM IST
+" Created: Aug 2005
+" Last Modified: Mon 18 May 2009 02:38:01 PM India Standard Time
 
 " Platform related {{{1
 "
 " Local settings file, default to linux
-let localFile = "~/.local.vim"
+let s:localFile = "~/.local.vim" 
 
 " Know the platform we're running on
 function GetPlatform()
@@ -18,7 +18,7 @@ endfunction
     
 " Get ready for life w/o walls
 if GetPlatform() == "win"
-    localFile = "~\local.vim"
+    let s:localFile = "~/local.vim"
     source $VIMRUNTIME/mswin.vim
     behave mswin
 endif
@@ -77,10 +77,15 @@ set tags=tags,../..
 " Misc {{{2
 filetype plugin on          " enable plugin support
 
+" Key Bindings {{{2
+nmap <Leader>dt :execute "normal i" . strftime("%b %d %Y, %H:%M:%S") . " "<Esc>
+imap <Leader>dt <Esc>:execute "normal i" . strftime("%b %d %Y, %H:%M:%S") . " "<Esc>i
 
 " Language and file types {{{1
 "
 " Generic {{{2
+" Filetype plugin
+filetype plugin indent on
 " Quickfix mode shortcuts
 nmap <silent><F9> :make<cr>
 imap <silent><F9> :make<cr>
@@ -113,7 +118,7 @@ au FileType cs map <F8> :!ctags --recurse --extra=+fq --fields=+ianmzS --c\#-kin
 autocmd BufNewFile,BufRead /tmp/mutt-* set filetype=mail
 au FileType mail setlocal spell spelllang=en_us
 au FileType mail set tw=66 autoindent expandtab formatoptions=tcqn
-au FileType mail set list listchars=tab:Â»Â·,trail:Â·
+au FileType mail set list listchars=tab:»·,trail:·
 au FileType mail set comments=nb:>
 au FileType mail vmap D dO[...]^[
 " go to a good starting point
@@ -183,9 +188,7 @@ inoremap <silent><C-Right> <C-o>:cal search('\<\<Bar>\%(^\<Bar>[^'.g:camelchar.'
 
 " Local machine dependent mods {{{1
 "
-if filereadable(localFile)
-    source localFile
-endif
+exe "source " . s:localFile
 
 " vim: foldmethod=marker
 " EOF
