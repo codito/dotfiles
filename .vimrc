@@ -1,6 +1,6 @@
 " VIM config file
 " Created: Aug 2005
-" Last Modified: Mon 18 May 2009 02:38:01 PM India Standard Time
+" Last Modified: Wed 09 Sep 2009 02:19:13 PM India Standard Time
 
 " Platform related {{{1
 "
@@ -15,7 +15,7 @@ function GetPlatform()
         return "nix"
     endif
 endfunction
-    
+ 
 " Get ready for life w/o walls
 if GetPlatform() == "win"
     let s:localFile = "~/local.vim"
@@ -35,6 +35,7 @@ set autoread                " read open files again when changed outside Vim
 set autowrite               " write a modified buffer on each :next , ...
 set backspace=indent,eol,start  " define backspace behavior
 set bufhidden=delete        " delete hidden buffers, changes will be lost!
+set switchbuf=split,usetab  " split/open new tab while switching buffers, for quickfix
 
 " Directories {{{2
 set autochdir               " automatically chdir to the current directory
@@ -57,6 +58,11 @@ set showmatch               " jump to the other end of a curly brace
 set showmode                " show the mode INSERT/REPLACE/...
 syntax enable               " enable syntax highlighting
 set textwidth=100           " break a line after 100 characters
+set noequalalways           " for :split don't split space equally
+set winheight=99999 winminheight=0  " rolodex look for vim
+
+" Key mappings in general {{{2
+nmap <silent><S-Tab> :tabnext<CR>
 
 " Search {{{2
 set incsearch               " use incremental search
@@ -77,9 +83,6 @@ set tags=tags,../..
 " Misc {{{2
 filetype plugin on          " enable plugin support
 
-" Key Bindings {{{2
-nmap <Leader>dt :execute "normal i" . strftime("%b %d %Y, %H:%M:%S") . " "<Esc>
-imap <Leader>dt <Esc>:execute "normal i" . strftime("%b %d %Y, %H:%M:%S") . " "<Esc>i
 
 " Language and file types {{{1
 "
@@ -88,25 +91,25 @@ imap <Leader>dt <Esc>:execute "normal i" . strftime("%b %d %Y, %H:%M:%S") . " "<
 filetype plugin indent on
 " Quickfix mode shortcuts
 nmap <silent><F9> :make<cr>
-imap <silent><F9> :make<cr>
 nmap <silent><F10> :cl<cr>
-imap <silent><F10> :cl<cr>
 nmap <silent><F11> :cp<cr>
-imap <silent><F11> :cp<cr>
 nmap <silent><F12> :cn<cr>
-imap <silent><F12> :cn<cr>
 
 " C/C++ {{{2
 au FileType cc,cpp setlocal tags+=~/.vim/tags/cpptags
 au FileType cc,cpp map <F8> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+" Quickfix mode: command line msbuild error format
+if GetPlatform() == "win"
+    au FileType c,cpp set errorformat=%f(%l)\ :\ error\ C%n:\ %m
+endif
 
 " C# {{{2
 " Folding : http://vim.wikia.com/wiki/Syntax-based_folding, see comment by Ostrygen
 au FileType cs set omnifunc=syntaxcomplete#Complete
-au FileType cs set foldmethod=marker
+au FileType cs set foldmethod=indent
 au FileType cs set foldmarker={,} 
-au FileType cs set foldtext=substitute(getline(v:foldstart),'{.*','{...}',)
-au FileType cs set foldlevelstart=2
+au FileType cs set foldtext=substitute(getline(v:foldstart+1),'{.*','{...}',)
+au FileType cs set foldlevelstart=3
 " Quickfix mode: command line msbuild error format
 if GetPlatform() == "win"
     au FileType cs set errorformat=\ %#%f(%l\\\,%c):\ error\ CS%n:\ %m
@@ -134,6 +137,9 @@ let php_folding=1           " enable folding for classes and functions
 " http://wiki.geeklog.net/wiki/index.php/Coding_Guidelines#Indenting_and_Line_Length
 au FileType php setlocal expandtab shiftwidth=4 softtabstop=4 tabstop=4
  
+" Powershell {{{2
+au BufRead,BufNewFile *.ps1 set ft=ps1
+
 " Python {{{2
 au FileType python source ~/.vim/utils/python.vim
 au FileType python setlocal et sw=4 sts=4 ts=4 ai
@@ -162,6 +168,14 @@ nmap <silent><F7> :NERDTreeToggle<cr>
 let g:netrw_browse_split=3  " all edits in new tab
 
 " TagList {{{2
+" Settings for taglist.vim
+let Tlist_Auto_Open=0
+let Tlist_Compact_Format=1
+let Tlist_Enable_Fold_Column=0
+let Tlist_Exit_OnlyWindow=1
+let Tlist_File_Fold_Auto_Close = 1
+let Tlist_Show_One_File = 1   " show tags only for the current file
+let Tlist_WinWidth=30
 nmap <Leader>tt :TlistToggle<cr>
 
 " Timestamp {{{2

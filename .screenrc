@@ -1,6 +1,6 @@
 ## Screen config
 ## Created: Late 2007
-## Last Modified: Fri 27 Mar 2009 04:45:49 PM IST
+## Last Modified: Fri 24 Jul 2009 08:16:44 PM IST
 
 ## Hardstatus stuff
 #change the hardstatus settings to give an window list at the bottom of the
@@ -76,8 +76,8 @@ bind 'K' kill
 bind 'I' login on
 bind 'O' login off
 bind '}' history
-bindkey ^[[c next
-bindkey ^[[d prev
+bindkey ^[[c next   # shift-right to move right
+bindkey ^[[d prev   # shift-left to move left
 
 ## Yet another hack:
 ## Prepend/append register [/] to the paste if ^a^] is pressed.
@@ -90,9 +90,18 @@ bindkey ^[[d prev
 ##
 ## default windows
 ##
-screen -t mutt 0 mutt
-screen -t rtorrent 1 rtorrent
-screen -t irssi 2 irssi
+screen -M -t root  0 su -
+screen    -t mail  1 mutt
+screen    -t torrent 2 rtorrent
+#screen    -t chat 3 irssi
+screen	6
+screen  7
+screen  8
+screen  9
+screen 10
+
+select 1
+
 # screen -t 40 2 rlogin server
 
 #
