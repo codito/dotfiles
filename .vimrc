@@ -1,6 +1,6 @@
 " VIM config file
 " Created: Aug 2005
-" Last Modified: Wed 09 Sep 2009 02:19:13 PM India Standard Time
+" Last Modified: Sun 27 Sep 2009 11:07:30 AM IST Standard Time
 
 " Platform related {{{1
 "
@@ -60,6 +60,7 @@ syntax enable               " enable syntax highlighting
 set textwidth=100           " break a line after 100 characters
 set noequalalways           " for :split don't split space equally
 set winheight=99999 winminheight=0  " rolodex look for vim
+set visualbell              " oh no beeps please!
 
 " Key mappings in general {{{2
 nmap <silent><S-Tab> :tabnext<CR>
