@@ -1,6 +1,6 @@
 " VIM config file
 " Created: Aug 2005
-" Last Modified: Sun 27 Sep 2009 11:07:30 AM IST Standard Time
+" Last Modified: Sun 27 Sep 2009 12:42:37 PM IST Standard Time
 
 " Platform related {{{1
 "
@@ -121,7 +121,7 @@ au FileType cs map <F8> :!ctags --recurse --extra=+fq --fields=+ianmzS --c\#-kin
 " Mail {{{2
 autocmd BufNewFile,BufRead /tmp/mutt-* set filetype=mail
 au FileType mail setlocal spell spelllang=en_us
-au FileType mail set tw=66 autoindent expandtab formatoptions=tcqn
+au FileType mail set tw=66 autoindent expandtab formatoptions=tcqna
 au FileType mail set list listchars=tab:»·,trail:·
 au FileType mail set comments=nb:>
 au FileType mail vmap D dO[...]^[
@@ -147,6 +147,11 @@ au FileType python setlocal et sw=4 sts=4 ts=4 ai
 
 " Viki {{{2
 au BufRead,BufNewFile $HOME/docs/thuts/* set ft=viki
+
+" Text {{{2
+au BufRead,BufNewFile *.txt set filetype=txt
+au FileType txt setlocal spell spelllang=en_us
+au FileType txt set tw=100 autoindent expandtab formatoptions=taqn
 
 " Misc {{{2
 " Change the working directory to the directory containing the current file
