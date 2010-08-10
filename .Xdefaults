@@ -1,7 +1,7 @@
 !
 ! Default config for X
 ! Created: Sun 24 Feb 2008 05:44:57 PM IST
-! Last Modified : ବଧ 01 4 2009 10:44:48 AM IST
+! Last Modified: Mon 11 Jan 2010 11:00:57 PM IST
 !
 
 !! defaults for XMessage
@@ -52,10 +52,10 @@ urxvt*externalBorder:   0
 urxvt*internalBorder:   0
 
 ! transparency
-!urxvt*inheritPixmap:	true
+urxvt*inheritPixmap:	true
 !urxvt*backgroundPixmap: "/home/arun/pics/Wallpapers/clean/55700-Kore - Default.png"
 !urxvt*geometry:		140x60
-!urxvt*tintColor:        black
+urxvt*tintColor:        black
 urxvt*fadeColor:        black
 urxvt*fading:           1
 urxvt*depth:            32
@@ -71,7 +71,7 @@ urxvt*pointerBlank:	true
 !urxvt*font:		-*-dina-medium-r-normal-*-12-*-*-*-*-*-*-*
 !urxvt*lineSpace:        1
 !urxvt*font:             xft:terminus:size=5;antialias=true
-urxvt*font:             xft:inconsolata:size=10;antialias=true
+urxvt*font:             xft:inconsolata:size=12;antialias=true
 !urxvt*font:             xft:DejaVu Sans Mono:size=10:antialias=true
 !urxvt*font:		 xft:Bitstream Vera Sans Mono:size=9:antialias=true
 !urxvt*boldFont:         xft:inconsolata:size=10

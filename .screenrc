@@ -1,6 +1,6 @@
 ## Screen config
 ## Created: Late 2007
-## Last Modified: Fri 24 Jul 2009 08:16:44 PM IST
+## Last Modified: Sun 11 Apr 2010 09:37:20 AM IST
 
 ## Hardstatus stuff
 #change the hardstatus settings to give an window list at the bottom of the
@@ -43,7 +43,7 @@ pow_detach_msg "Screen session of \$LOGNAME \$:cr:\$:nl:ended."
 # shell -$SHELL
 
 ## the shell title should display the job running
-shelltitle "$ |bash"
+shelltitle "$ |shell"
 
 ## set every new windows hardstatus line to something descriptive
 defhstatus "screen: ^En (^Et)"
@@ -90,17 +90,12 @@ bindkey ^[[d prev   # shift-left to move left
 ##
 ## default windows
 ##
-screen -M -t root  0 su -
-screen    -t mail  1 mutt
-screen    -t torrent 2 rtorrent
-#screen    -t chat 3 irssi
-screen	6
-screen  7
-screen  8
-screen  9
-screen 10
+screen	0
+screen  1
+screen -M -t root  7 su -
+screen    -t mail  8 mutt
 
-select 1
+select 0
 
 # screen -t 40 2 rlogin server
 

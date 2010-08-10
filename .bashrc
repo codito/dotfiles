@@ -1,7 +1,7 @@
 #
 # Bash config
 # Created: Aug 2005
-# Last Modified: Sat 28 Mar 2009 01:53:37 PM IST
+# Last Modified: Thu 31 Dec 2009 08:13:37 PM IST
 #
 
 ## Pure bash {{{1
@@ -29,6 +29,10 @@ alias l="ls --color=auto"
 alias ll="ls --color=auto -lh"
 alias cd..="cd .."
 alias md="mkdir"
+
+## Utilities {{{1
+# KeyChain
+eval `keychain --eval --nogui -Q -q id_rsa`
 
 # vim: fdm=marker
 # EOF

@@ -1,7 +1,7 @@
 #
 # Configuration for Mutt - Next Generation
 # Created : Tue 26 Feb 2008 10:37:48 PM IST
-# Last Modified : Fri 09 Jan 2009 08:00:57 AM IST
+# Last Modified : Sun 04 Oct 2009 01:52:39 AM IST
 #
 
 # Variables
@@ -23,6 +23,7 @@ set followup_to=yes
 set use_envelope_from=yes
 set read_inc=20
 set move=no
+set beep=no
 
 set pager_index_lines=7
 set pager_stop
