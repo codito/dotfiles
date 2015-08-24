@@ -1,6 +1,6 @@
 # .ratpoisonrc
 # Parts of this is inspired by http://aerosuidae.net/musca/User:Batz/musca_start
-# Last Modified: Thu 23 Sep 2010 01:03:55 PM IST
+# Last Modified: 13/12/2011, 17:57:03 IST
 
 # Stop managing {{{1
 #unmanage tint2
@@ -14,7 +14,7 @@
 set bwcolor dim gray
 
 ## Set the border width for all windows.
-set border 1
+set border 0
 set padding 0 0 0 0
 set font -*-dina-medium-r-normal-*-12-*-*-*-*-*-*-*
 #set waitcursor 1
@@ -38,9 +38,8 @@ exec /usr/bin/rpws init 4 -k
 
 ## Ratpoison shortcuts
 # Create a new keymap for all window management
-# F30 is my left windows key, in ~/.xmodmap: keymap 133 = F30 
 newkmap win
-definekey top F30 readkey win
+definekey top Super_L readkey win
 
 # Groups
 definekey win 1                 rpws1
@@ -99,8 +98,10 @@ definekey win S-Tab             prev
 #definekey win w                switch window
 #definekey win Mod4+space       stack flip
 
+definekey win question          help win
+
 ## Ratpoison options
-escape Caps_Lock
+#escape Caps_Lock
 warp on
 startup_message off
 
@@ -110,23 +111,24 @@ exec xsetroot -cursor_name left_ptr
 # Set a background, randomly picking from a certain directory.
 #exec cd ~/pics/Wallpapers/clean && Esetroot ~/pics/Wallpapers/clean/flatgreen.jpg
 bind I exec cd ~/pics/wallpapers && feh --bg-center `w=(*.jpg); n=${#w[@]}; echo "${w[RANDOM%n]}"` && cd ~/
-alias term exec urxvt
+alias term exec ~/bin/urxvt-client
 bind c term
 bind a time
 bind grave other
 
 ## Dmenu magic
 # Rat shell
-unbind exclam
-bind exclam exec $(dmenu_path | dmenu -i -nb '#000000' -nf '#777777' -sb '#770000' -sf '#ffffff' -fn '-*-dina-medium-r-normal-*-12-*-*-*-*-*-*-*' -p '> ')
+unbind r
+bind r exec $(dmenu_run -i -nb '#000000' -nf '#777777' -sb '#770000' -sf '#ffffff' -fn '-*-dina-medium-r-normal-*-12-*-*-*-*-*-*-*' -p '> ')
 # Rat windows select
 unbind w
 bind w exec $(ratpoison -c "select `ratpoison -c "windows" | dmenu -i -nb '#000000' -nf '#777777' -sb '#770000' -sf '#ffffff' -fn '-*-dina-medium-r-normal-*-12-*-*-*-*-*-*-*' -p ':: ' | awk '{print $1}'`")
 
 ## Applications {{{1
 bind e exec gvim
-bind o exec opera
-bind O exec firefox
+bind E exec ~/bin/urxvt-client -e /usr/bin/vim
+bind o exec firefox
+bind O exec chrome
 bind m exec smplayer
 bind M exec vlc
 bind v exec VirtualBox
@@ -138,12 +140,9 @@ bind Print exec import -window root ~/pics/other/screen/screen-`date +%Y%m%d%H%M
 
 ## Keybindings {{{1
 # volume
-definekey top S-XF86AudioRaiseVolume exec ~/bin/voltun -c up -i 3% -m Master
-definekey top S-XF86AudioMute        exec ~/bin/voltun -c mute -i 3% -m Master
-definekey top S-XF86AudioLowerVolume exec ~/bin/voltun -c down -i 3% -m Master
-definekey top XF86AudioRaiseVolume   exec ~/bin/voltun -c up -i 3% -m PCM
-definekey top XF86AudioMute          exec ~/bin/voltun -c mute -m PCM
-definekey top XF86AudioLowerVolume   exec ~/bin/voltun -c down -m PCM
+definekey top XF86AudioRaiseVolume exec ~/bin/voltun -c up -i 3% -m Master
+definekey top XF86AudioMute        exec ~/bin/voltun -c mute -i 3% -m Master
+definekey top XF86AudioLowerVolume exec ~/bin/voltun -c down -i 3% -m Master
 
 # multimedia keys
 definekey top S-XF86AudioNext         exec mpc seek +00:00:05 >/dev/null
@@ -153,6 +152,7 @@ definekey top XF86AudioPrev           exec mpc prev >/dev/null && notify-send "$
 definekey top XF86AudioStop           exec mpc stop >/dev/null && notify-send "$(mpc --format '[[%artist% - ]%title%]|[%file%] #| %time%' | head -n1)" -t 1000
 definekey top S-XF86AudioStop         exec notify-send "$(mpc --format '[[%artist% - ]%title%]|[%file%] #| %time%' | head -n1)" -i notification-audio-play -t 1000
 definekey top XF86AudioPlay           exec mpc toggle >/dev/null && notify-send "$(mpc --format '[[%artist% - ]%title%]|[%file%] #| %time%' | head -n1)" -i notification-audio-play -t 1000
+definekey top XF86Calculator          exec mpc next >/dev/null && notify-send "$(mpc --format '[[%artist% - ]%title%]|[%file%] #| %time%' | head -n1)" -i notification-audio-next -t 1000
 
 ## Aliasing long commands within ratpoison {{{1
 #alias conkeror exec mozilla-firefox -chrome chrome://conkeror/content

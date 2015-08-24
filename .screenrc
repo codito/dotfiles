@@ -1,6 +1,6 @@
 ## Screen config
 ## Created: Late 2007
-## Last Modified: Sun 11 Apr 2010 09:37:20 AM IST
+## Last Modified: 21:05:22 IST, 20/09/2011
 
 ## Hardstatus stuff
 #change the hardstatus settings to give an window list at the bottom of the
@@ -14,7 +14,7 @@
 
 #### without those scripts :-)
 #hardstatus alwayslastline "%{+b dw}:%{-b dw}:%{+b dk}[%{-b dg} %0C:%s%a %{=b dk}]-[ %{-b dg}%D %d %M %Y %{+b dk}] %=[ %{-b dg}%1`%{=b dk} ]%{-b dw}:%{+b dw}:%<"
-hardstatus alwayslastline "%{=b dw}:%{-b dw}:%{=b dk}[%{-b dg} %0C:%s%a %{=b dk}]-[ %= %?%{-b dg}%-Lw%?%{+b dk}(%{+b dw}%n:%t%{+b dk})%?(%u)%?%{-b dw}%?%{-b dg}%+Lw%? %{=b dk}]-[ %{-b dg}%D %d %M %Y %{+b dk}] %{-b dw}:%{+b dw}:"
+hardstatus alwayslastline "%{=b dw}:%{-b dw}:%{=b dk}[%{-b dg} %0C:%s%a %{=b dk}]-[ %= %?%{-b dg}%-Lw%?%{+b dk}(%{+b dw}%n:%t%{+b dk})%?(%u)%?%{-b dw}%?%{-b dg}%+Lw%? %{=b dk}]:%{+b dw}:"
 
 sorendition "-b dw"
 
@@ -92,8 +92,9 @@ bindkey ^[[d prev   # shift-left to move left
 ##
 screen	0
 screen  1
-screen -M -t root  7 su -
-screen    -t mail  8 mutt
+#screen -M -t root  7 su -
+#screen    -t mail  8 mutt
+#screen    -t tweet  9 ttytter
 
 select 0
 
