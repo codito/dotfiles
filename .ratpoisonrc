@@ -136,7 +136,7 @@ bind x exec acroread
 #bind C-g exec ratpoison -c 'hsplit 288' -c 'fselect 1' -c 'exec /usr/bin/gimp' && sleep 5 && ratpoison -c 'dedicate 1'
 
 # Make prtscreen work, as long as in ratpoison mode. "import" is an Imagemagick command.
-bind Print exec import -window root ~/pics/other/screen/screen-`date +%Y%m%d%H%M%S`.png
+bind Print exec deepin-screenshot
 
 ## Keybindings {{{1
 # volume
