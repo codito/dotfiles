@@ -1,6 +1,6 @@
 # .ratpoisonrc
 # Parts of this is inspired by http://aerosuidae.net/musca/User:Batz/musca_start
-# Last Modified: 13/12/2011, 17:57:03 IST
+# Last Modified: 18/06/2016, 09:21:11 IST
 
 # Stop managing {{{1
 #unmanage tint2
@@ -157,5 +157,9 @@ definekey top XF86Calculator          exec mpc next >/dev/null && notify-send "$
 ## Aliasing long commands within ratpoison {{{1
 #alias conkeror exec mozilla-firefox -chrome chrome://conkeror/content
 #alias elinks exec aterm -e elinks
+
+## Extras {{{1
+# Cheat java programs
+exec wmname LG3D
 
 # vim: set tw=999:
