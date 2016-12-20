@@ -33,4 +33,4 @@ alias tmux="TERM=screen-256color-bce tmux"
 alias mpd="nocorrect mpd"
 
 # nvm setup
-source /usr/share/nvm/init-nvm.sh
+#source /usr/share/nvm/init-nvm.sh
