@@ -1,0 +1,354 @@
+!
+! Default config for X
+! Created: Sun 24 Feb 2008 05:44:57 PM IST
+! Last Modified: 05/01/2017, 07:32:48 IST
+!
+
+!! defaults for XMessage
+xmessage*maxWidth:  400
+xmessage*maxHeight: 200
+
+!! defaults for XTerm
+xterm*foreground:   white
+xterm*background:   black
+xterm*color0:      black
+xterm*color1:      !40e0d0
+xterm*color2:      !87cefa
+xterm*color3:      !ffff00
+xterm*color4:      !d1eeee
+xterm*color5:      !eed8ae
+xterm*color6:      !b4eeb4
+xterm*color7:      gray
+xterm*color8:      gray40
+xterm*color9:      !ee6363
+xterm*color10:      !c5f779
+xterm*color11:      !fff796
+xterm*color12:      !00b2ee
+xterm*color13:      !cf9ebe
+xterm*color14:      !71bebe
+xterm*color15:      white
+
+!! Xft
+xft*dpi:        96
+Xft*autohint:   0
+Xft*lcdfilter:  lcddefault
+Xft*hintstyle:  hintfull
+Xft*hinting:    1
+Xft*antialias:  1
+Xft*rgba:       rgb
+
+!! Urxvt config
+urxvt*termName: rxvt
+urxvt*iso14755: false
+urxvt*iso14755_55: false
+
+! bg/fg colors
+!urxvt*background:  rgba:ffff/ffff/ffff/ffff
+!urxvt*background:  rgba:0000/0000/0000/dddd
+!urxvt*background:  !ffffff
+!urxvt*foreground:  !000000
+!urxvt*foreground:  !FFFFFF
+
+! scroll
+!urxvt*secondaryScroll:  true
+!urxvt*scrollBar_right:	false
+urxvt*scrollBar:	false
+
+! borders
+urxvt*borderWidth:	0
+!urxvt*borderLess:	true
+urxvt*externalBorder:   0
+urxvt*internalBorder:   0
+urxvt*lineSpace:        0
+
+! transparency
+!urxvt*inheritPixmap:	true
+!urxvt*backgroundPixmap: "/home/arun/pics/Wallpapers/clean/55700-Kore - Default.png"
+!urxvt*geometry:		140x60
+urxvt*tintColor:        black
+urxvt*fadeColor:        black
+urxvt*fading:           1
+urxvt*depth:            32
+urxvt*shading:		32
+urxvt*transparent:      true
+
+! cursor and pointer
+urxvt*cursorColor:      lightgreen
+urxvt*cursorBlink:      true
+urxvt*cursorUnderline:  true
+urxvt*pointerBlank:	true
+
+! font
+!urxvt*font:		-*-dina-medium-r-*-*-*-*-*-*-*-*-microsoft-cp1252
+!urxvt*font:		-*-terminus-medium-*-*-*-14-*-*-*-*-*-iso8859-1
+!urxvt*font:             xft:terminus:bold:size=12;;antialias=true
+!urxvt*font:             xft:inconsolata:size=13;antialias=true
+!urxvt*font:             xft:Consolas:size=14;antialias=true
+!urxvt*font:             xft:DejaVu Sans Mono:medium:size=14:antialias=true
+!urxvt*font:             xft:Andale Mono:size=12:antialias=true
+urxvt*font:             xft:Monaco:size=12:antialias=true
+!urxvt*font:		 xft:Bitstream Vera Sans Mono:size=9:antialias=true
+!urxvt*boldFont:         xft:inconsolata:size=10
+!urxvt*lineSpace:        1
+
+! misc
+! urxvt*loginShell:       true
+urxvt*saveLines:        10000
+urxvt.matcher.button:       1
+urxvt.matcher.pattern.1:    \bwww\.[\w-]\.[\w./?&@!-]*[\w/-]
+urxvt*urlLauncher:        opera -newtab
+urxvt.perl-ext-common:      default,matcher
+
+!!! Solarized Dark
+
+!!! Theme 1
+!!black text
+!urxvt*color0:           !242424
+!urxvt*color8:           !cdb5cd
+!!red text
+!urxvt*color1:           !bf7979
+!urxvt*color9:           !f4a45f
+!!green text
+!urxvt*color2:           !97b26b
+!urxvt*color10:          !c5f779
+!!yellow text
+!urxvt*color3:           !cdcda1
+!urxvt*color11:          !ffffaf
+!!blue text
+!urxvt*color4:           !86a2be
+!urxvt*color12:          !98afd9
+!!magenta text
+!urxvt*color5:           !d9b798
+!urxvt*color13:          !d7d998
+!!cyan text
+!urxvt*color6:           !a1b5cd
+!urxvt*color14:          !a1b5cd
+!!white
+!urxvt*color7:           !ffffff
+!urxvt*color15:          !dedede
+
+! Greenish theme
+!urxvt*color0:       !000000
+!urxvt*color8:       !666666
+!!! DarkRed + Red
+!urxvt*color1:       !b45151
+!urxvt*color9:       !fe8686
+!!! DarkGreen + Green
+!urxvt*color2:       !8ba574
+!urxvt*color10:      !a5dca5
+!!! DarkYellow + Yellow
+!urxvt*color3:       Khaki3
+!urxvt*color11:      !efe58b
+!!! DarkBlue + Blue
+!urxvt*color4:       !2797d8
+!urxvt*color12:      !86cdea
+!!! DarkMangenta + Mangenta
+!urxvt*color5:       !aa6eaf
+!urxvt*color13:      !b698b8
+!!!DarkCyan + Cyan
+!urxvt*color6:       !418179
+!urxvt*color14:      !71bebe
+!!! LightGrey + White
+!urxvt*color7:       !bebebe
+!urxvt*color15:      !ffffff
+
+!! Light theme, for crappy CRTs
+!urxvt*color0:    !000000
+!urxvt*color8:    !000054
+!urxvt*color1:    !A80000
+!urxvt*color9:    !AA0054
+!urxvt*color2:    !00A800
+!urxvt*color10:   !00AA54
+!urxvt*color3:    !A8A800
+!urxvt*color11:   !AAAA54
+!urxvt*color4:    !0000A8
+!urxvt*color12:   !0055CC
+!urxvt*color5:    !A800A8
+!urxvt*color13:   !AA00AA
+!urxvt*color6:    !00A8A8
+!urxvt*color14:   !00AAAA
+!urxvt*color7:    !A8A8A8
+!urxvt*color15:   !AAAAAA
+
+!Gslob nature-suede
+!URxvt*background:       #170F0D
+!URxvt*foreground:       #746C48
+
+!URxvt*color0:           #392925
+!URxvt*color8:           #544B2E
+
+!URxvt*color1:           #98724C
+!URxvt*color9:           #AF652F
+
+!URxvt*color2:           #908F32
+!URxvt*color10:          #C3C13D
+
+!URxvt*color3:           #AA964C
+!URxvt*color11:          #C8B55B
+
+!URxvt*color4:           #7B854E
+!URxvt*color12:          #70A16C
+
+!URxvt*color5:           #6B5644
+!URxvt*color13:          #98724C
+
+!URxvt*color6:           #5C5142
+!URxvt*color14:          #778725
+
+!URxvt*color7:           #C8B55B
+!URxvt*color15:          #E4DC8C
+
+
+!!user 77 - Mashup colors
+!*foreground:        #B2A191
+!*background:        #171717
+!*borderColor:       #171717
+!*cursorColor:       #C7A551
+!!black
+!*color0:            #202020
+!*color8:            #404040
+!!red
+!*color1:            #BF3F34
+!*color9:            #FF6C5F
+!!green
+!*color2:            #707D22
+!*color10:           #B8CA4B
+!!yellow
+!*color3:            #BF7A29
+!*color11:           #C7A551
+!!blue
+!*color4:            #627A92
+!*color12:           #95B9DE
+!!magenta
+!*color5:            #75507B
+!*color13:           #AD7FA8
+!!cyan
+!*color6:            #757978
+!*color14:           #9FA590
+!!white
+!*color7:            #B2A191
+!*color15:           #E8D0C3 
+
+
+!! drop in Solarized colorscheme for Xresources/Xdefaults
+!!SOLARIZED HEX 16/8 TERMCOL XTERM/HEX L*A*B RGB HSB
+!!--------- ------- ---- ------- ----------- ---------- ----------- -----------
+!!base03 #002b36 8/4 brblack 234 #1c1c1c 15 -12 -12 0 43 54 193 100 21
+!!base02 #073642 0/4 black 235 #262626 20 -12 -12 7 54 66 192 90 26
+!!base01 #586e75 10/7 brgreen 240 #585858 45 -07 -07 88 110 117 194 25 46
+!!base00 #657b83 11/7 bryellow 241 #626262 50 -07 -07 101 123 131 195 23 51
+!!base0 #839496 12/6 brblue 244 #808080 60 -06 -03 131 148 150 186 13 59
+!!base1 #93a1a1 14/4 brcyan 245 #8a8a8a 65 -05 -02 147 161 161 180 9 63
+!!base2 #eee8d5 7/7 white 254 #e4e4e4 92 -00 10 238 232 213 44 11 93
+!!base3 #fdf6e3 15/7 brwhite 230 #ffffd7 97 00 10 253 246 227 44 10 99
+!!yellow #b58900 3/3 yellow 136 #af8700 60 10 65 181 137 0 45 100 71
+!!orange #cb4b16 9/3 brred 166 #d75f00 50 50 55 203 75 22 18 89 80
+!!red #dc322f 1/1 red 160 #d70000 50 65 45 220 50 47 1 79 86
+!!magenta #d33682 5/5 magenta 125 #af005f 50 65 -05 211 54 130 331 74 83
+!!violet #6c71c4 13/5 brmagenta 61 #5f5faf 50 15 -45 108 113 196 237 45 77
+!!blue #268bd2 4/4 blue 33 #0087ff 55 -10 -45 38 139 210 205 82 82
+!!cyan #2aa198 6/6 cyan 37 #00afaf 60 -35 -05 42 161 152 175 74 63
+!!green #859900 2/2 green 64 #5f8700 60 -20 65 133 153 0 68 100 60
+
+!! Light
+!#define S_base3 #002b36
+!#define S_base2 #073642
+!#define S_base1 #586e75
+!#define S_base0 #657b83
+!#define S_base00 #839496
+!#define S_base01 #93a1a1
+!#define S_base02 #eee8d5
+!#define S_base03 #fdf6e3
+
+!! Dark
+!!#define S_base03 #002b36
+!!#define S_base02 #073642
+!!#define S_base01 #586e75
+!!#define S_base00 #657b83
+!!#define S_base0 #839496
+!!#define S_base1 #93a1a1
+!!#define S_base2 #eee8d5
+!!#define S_base3 #fdf6e3
+
+!#define S_yellow #b58900
+!#define S_orange #cb4b16
+!#define S_red #dc322f
+!#define S_magenta #d33682
+!#define S_violet #6c71c4
+!#define S_blue #268bd2
+!#define S_cyan #2aa198
+!#define S_green #859900
+
+!*background: S_base03
+!*foreground: S_base00
+!*fading: 40
+!*fadeColor: S_base03
+!*cursorColor: S_base1
+!*pointerColorBackground:S_base01
+!*pointerColorForeground:S_base1
+
+!!! black dark/light
+!*color0: S_base02
+!*color8: S_base03
+
+!!! red dark/light
+!*color1: S_red
+!*color9: S_orange
+
+!!! green dark/light
+!*color2: S_green
+!*color10: S_base01
+
+!!! yellow dark/light
+!*color3: S_yellow
+!*color11: S_base00
+
+!!! blue dark/light
+!*color4: S_blue
+!*color12: S_base0
+
+!!! magenta dark/light
+!*color5: S_magenta
+!*color13: S_violet
+
+!!! cyan dark/light
+!*color6: S_cyan
+!*color14: S_base1
+
+!!! white dark/light
+!*color7: S_base2
+!*color15: S_base3
+
+
+! Hybrid Terminal Colours. Uses the palette from Tomorrow-Night:
+!! https://github.com/chriskempson/tomorrow-theme/blob/master/vim/colors/Tomorrow-Night.vim
+
+*background: #1D1F21
+*foreground: #C5C8C6
+! black
+*color0: #282A2E
+*color8: #373B41
+! red
+*color1: #A54242
+*color9: #CC6666
+! green
+*color2: #8C9440
+*color10: #B5BD68
+! yellow
+*color3: #DE935F
+*color11: #F0C674
+! blue
+*color4: #5F819D
+*color12: #81A2BE
+! magenta
+*color5: #85678F
+*color13: #B294BB
+! cyan
+*color6: #5E8D87
+*color14: #8ABEB7
+! white
+*color7: #707880
+*color15: #C5C8C6
+
+
+! vim: set fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
