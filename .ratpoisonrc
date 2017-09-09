@@ -1,6 +1,6 @@
 # .ratpoisonrc
 # Parts of this is inspired by http://aerosuidae.net/musca/User:Batz/musca_start
-# Last Modified: 18/06/2016, 09:21:11 IST
+# Last Modified: 09/09/2017, 09:13:49 IST
 
 # Stop managing {{{1
 #unmanage tint2
@@ -127,16 +127,16 @@ bind w exec $(ratpoison -c "select `ratpoison -c "windows" | dmenu -i -nb '#0000
 ## Applications {{{1
 bind e exec gvim
 bind E exec ~/bin/urxvt-client -e /usr/bin/vim
-bind o exec firefox
-bind O exec chrome
+bind o exec vivaldi-stable
+bind O exec chromium
 bind m exec smplayer
 bind M exec vlc
 bind v exec VirtualBox
-bind x exec acroread
+bind x exec zathura
 #bind C-g exec ratpoison -c 'hsplit 288' -c 'fselect 1' -c 'exec /usr/bin/gimp' && sleep 5 && ratpoison -c 'dedicate 1'
 
 # Make prtscreen work, as long as in ratpoison mode. "import" is an Imagemagick command.
-bind Print exec deepin-screenshot
+bind Print exec maim -st 9999999 ~/$(date +%s).png
 
 ## Keybindings {{{1
 # volume
