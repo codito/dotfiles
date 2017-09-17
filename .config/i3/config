@@ -1,6 +1,6 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-# Last Modified: 17/09/2017, 21:47:22 IST
+# Last Modified: 17/09/2017, 23:04:09 IST
 #
 
 ## Modifer {{{1
@@ -169,6 +169,7 @@ bindsym $mod+o mode "apps"
 ## Global Keybindings {{{1
 # Screenshot
 bindsym Print exec maim -st 9999999 ~/$(date +%s).png
+bindsym Shift+Print exec scrot 'Screenshot-%Y-%m-%d_$wx$h.png'
 
 # Volume
 bindsym XF86AudioRaiseVolume exec ~/bin/voltun -c up -i 3% -m Master
