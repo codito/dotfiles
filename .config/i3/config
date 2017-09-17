@@ -1,6 +1,6 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-# Last Modified: 17/09/2017, 19:28:49 IST
+# Last Modified: 17/09/2017, 21:47:22 IST
 #
 
 ## Modifer {{{1
@@ -151,8 +151,8 @@ bindsym $mod+Shift+w mode "resize"
 mode "apps" {
     bindsym e exec gvim
     bindsym E exec ~/bin/urxvt-client -e /usr/bin/vim
-    bindsym o exec vivaldi-stable
-    bindsym O exec chromium
+    bindsym b exec vivaldi-stable
+    bindsym B exec chromium
     bindsym m exec smplayer
     bindsym M exec vlc
     bindsym n exec boostnote
