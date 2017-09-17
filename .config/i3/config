@@ -1,0 +1,191 @@
+# i3 config file (v4)
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+# Last Modified: 17/09/2017, 19:28:49 IST
+#
+
+## Modifer {{{1
+# Set modifier to Windows key
+set $mod Mod4
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+## Appearance {{{1
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+font pango:DejaVu Sans Mono 9
+# Do not use borders for windows or floats
+new_window none
+new_float none
+
+## Window Management {{{1
+# Do not move mouse to center of window on focus
+mouse_warping none
+# Focus shouldn't follow the mouse
+focus_follows_mouse no
+# Set urgent hint if a window in another workspace is activated
+# Still focus if the window is in current workspace
+focus_on_window_activation smart
+# Automatically move to older workspace on current workspace key
+# E.g. $mod+2 will move to workspace 1 if workspace 1 was the previous one
+workspace_auto_back_and_forth yes
+
+# start a terminal
+bindsym $mod+Return exec i3-sensible-terminal
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# start dmenu (a program launcher)
+bindsym $mod+r exec dmenu_run
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+j move up
+bindsym $mod+Shift+l move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+- split h
+
+# split in vertical orientation
+bindsym $mod+| split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+## Modes {{{1
+# Resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+Shift+w mode "resize"
+
+# Application shortcuts
+mode "apps" {
+    bindsym e exec gvim
+    bindsym E exec ~/bin/urxvt-client -e /usr/bin/vim
+    bindsym o exec vivaldi-stable
+    bindsym O exec chromium
+    bindsym m exec smplayer
+    bindsym M exec vlc
+    bindsym n exec boostnote
+    bindsym v exec VirtualBox
+    bindsym x exec zathura
+
+    # back to normal: Enter or Escape
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
+}
+
+bindsym $mod+o mode "apps"
+
+## Global Keybindings {{{1
+# Screenshot
+bindsym Print exec maim -st 9999999 ~/$(date +%s).png
+
+# Volume
+bindsym XF86AudioRaiseVolume exec ~/bin/voltun -c up -i 3% -m Master
+bindsym XF86AudioMute        exec ~/bin/voltun -c mute -i 3% -m Master
+bindsym XF86AudioLowerVolume exec ~/bin/voltun -c down -i 3% -m Master
+
+# Multimedia Keys
+bindsym Shift+XF86AudioNext         exec mpc seek +00:00:05 >/dev/null
+bindsym Shift+XF86AudioPrev         exec mpc seek -00:00:05 >/dev/null
+bindsym XF86AudioNext           exec mpc next >/dev/null && notify-send "$(mpc --format '[[%artist% - ]%title%]|[%file%] #| %time%' | head -n1)" -i notification-audio-next -t 1000
+bindsym XF86AudioPrev           exec mpc prev >/dev/null && notify-send "$(mpc --format '[[%artist% - ]%title%]|[%file%] #| %time%' | head -n1)" -i notification-audio-previous -t 1000
+bindsym XF86AudioStop           exec mpc stop >/dev/null && notify-send "$(mpc --format '[[%artist% - ]%title%]|[%file%] #| %time%' | head -n1)" -t 1000
+bindsym Shift+XF86AudioStop         exec notify-send "$(mpc --format '[[%artist% - ]%title%]|[%file%] #| %time%' | head -n1)" -i notification-audio-play -t 1000
+bindsym XF86AudioPlay           exec mpc toggle >/dev/null && notify-send "$(mpc --format '[[%artist% - ]%title%]|[%file%] #| %time%' | head -n1)" -i notification-audio-play -t 1000
+bindsym XF86Calculator          exec mpc next >/dev/null && notify-send "$(mpc --format '[[%artist% - ]%title%]|[%file%] #| %time%' | head -n1)" -i notification-audio-next -t 1000
+
+## Bar {{{1
+exec polybar primary
+
+# vim: set tw=999:
