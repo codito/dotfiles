@@ -1,0 +1,3 @@
+#!/bin/sh
+
+mono --assembly-loader=strict /opt/omnisharp-roslyn/OmniSharp.exe "$@"
