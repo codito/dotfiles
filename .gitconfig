@@ -7,6 +7,19 @@
     co = checkout
     df = diff
     lg = log -p
+
+    # Semantic Commits
+    # https://github.com/fteem/git-semantic-commits
+    # https://git.wiki.kernel.org/index.php/Aliases#Advanced_aliases_with_arguments
+    cdo = "!f() { git commit -m \"docs: $1\"; }; f"
+    cfe = "!f() { git commit -m \"feat: $1\"; }; f"
+    cfi = "!f() { git commit -m \"fix: $1\"; }; f"
+    cho = "!f() { git commit -m \"chore: $1\"; }; f"
+    clo = "!f() { git commit -m \"localize: $1\"; }; f"
+    cre = "!f() { git commit -m \"refactor: $1\"; }; f"
+    cst = "!f() { git commit -m \"style: $1\"; }; f"
+    cte = "!f() { git commit -m \"test: $1\"; }; f"
+
 [color]
     ui = auto
 [color "branch"]
