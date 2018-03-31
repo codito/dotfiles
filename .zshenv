@@ -1,10 +1,10 @@
 # ZSH env file
 # sourced for all terminals
 # Created: Sat 29 Nov 2008 12:14:40 PM IST
-# Last Modified: 24/09/2017, 19:20:31 IST
+# Last Modified: 21/03/2018, 18:52:48 IST
 
 export EDITOR="vim"
-export PATH=${PATH}:$HOME/bin
+export PATH=${PATH}:$HOME/bin:$HOME/.yarn/bin
 #PYTHONHOME="/usr:/usr"
 
 # Python VirtualEnv
