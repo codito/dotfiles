@@ -1,7 +1,7 @@
 !
 ! Default config for X
 ! Created: Sun 24 Feb 2008 05:44:57 PM IST
-! Last Modified: 25/03/2017, 07:40:32 IST
+! Last Modified: 03/06/2018, 15:51:09 IST
 !
 
 !! defaults for XMessage
@@ -86,9 +86,12 @@ urxvt*pointerBlank:	true
 !urxvt*font:             xft:Consolas:size=14;antialias=true
 !urxvt*font:             xft:DejaVu Sans Mono:medium:size=14:antialias=true
 !urxvt*font:             xft:Andale Mono:size=12:antialias=true
-urxvt*font:             xft:Monaco:size=12:antialias=true
 !urxvt*font:		 xft:Bitstream Vera Sans Mono:size=9:antialias=true
-!urxvt*boldFont:         xft:inconsolata:size=10
+!urxvt*font:             xft:Monaco:size=12:antialias=true
+urxvt*font:             xft:Anonymous Pro:size=12:antialias=true,xft:Lohit Hindi,xft:DejaVu Sans Mono
+urxvt*boldFont:         xft:Anonymous Pro:weight=Bold:size=12:antialias=true,xft:Lohit Hindi:weight=Bold,xft:DejaVu Sans Mono:weight=Bold
+!urxvt*font:             xft:Hack:size=12:antialias=true,xft:Lohit Hindi,xft:DejaVu Sans Mono
+!urxvt*boldFont:         xft:Hack:weight=Bold:size=12:antialias=true,xft:Lohit Hindi:weight=Bold,xft:DejaVu Sans Mono:weight=Bold
 !urxvt*lineSpace:        1
 
 ! misc
