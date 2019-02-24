@@ -1,6 +1,6 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-# Last Modified: 19/09/2017, 19:39:31 IST
+# Last Modified: 13/01/2019, 07:24:40 IST
 #
 
 ## Modifer {{{1
@@ -155,7 +155,7 @@ mode "apps" {
     bindsym B exec chromium
     bindsym m exec smplayer
     bindsym M exec vlc
-    bindsym n exec boostnote
+    bindsym n exec qnote
     bindsym v exec VirtualBox
     bindsym x exec zathura
 
@@ -174,7 +174,7 @@ bindsym Shift+Print exec scrot 'Screenshot-%Y-%m-%d_$wx$h.png'
 # Volume
 bindsym XF86AudioRaiseVolume exec ~/bin/voltun -c up -i 3% -m Master
 bindsym XF86AudioMute        exec ~/bin/voltun -c mute -i 3% -m Master
-bindsym XF86AudioLowerVolume exec ~/bin/voltun -c down -i 3% -m Master
+bindsym Shift+XF86AudioRaiseVolume exec ~/bin/voltun -c down -i 3% -m Master
 
 # Multimedia Keys
 bindsym Shift+XF86AudioNext     exec mpc seek +00:00:05 >/dev/null
