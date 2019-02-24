@@ -1,6 +1,6 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-# Last Modified: 13/01/2019, 07:24:40 IST
+# Last Modified: 24/02/2019, 16:08:56 IST
 #
 
 ## Modifer {{{1
@@ -155,7 +155,7 @@ mode "apps" {
     bindsym B exec chromium
     bindsym m exec smplayer
     bindsym M exec vlc
-    bindsym n exec qnote
+    bindsym n exec QOwnNotes
     bindsym v exec VirtualBox
     bindsym x exec zathura
 
