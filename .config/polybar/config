@@ -1,17 +1,28 @@
 ; Polybar configuration
 ; See documentation at https://github.com/jaagr/polybar/wiki/Configuration
-; Last Modified: 17/09/2017, 19:35:30 IST
+; Last Modified: 09/03/2019, 19:07:18 IST
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #222
-background-alt = #444
-;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
-foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+; Based on gruvbox colors
+background = #1d2021
+background-alt = #282828
+foreground = #a89984
+foreground-alt = #665c54
+primary = #458588
+secondary = #cc241d
+alert = #689d6a
+white = #ebdbb2
+
+;[colors]
+;;background = ${xrdb:color0:#222}
+;background = #222
+;background-alt = #444
+;;foreground = ${xrdb:color7:#222}
+;foreground = #dfdfdf
+;foreground-alt = #555
+;primary = #ffb52a
+;secondary = #e60053
+;alert = #bd2c40
 
 [bar/primary]
 ;monitor = ${env:MONITOR:HDMI-1}

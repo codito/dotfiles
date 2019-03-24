@@ -24,12 +24,11 @@ ZSH_THEME="juanghurtado"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git vi-mode archlinux ssh-agent dotenv)
+plugins=(git vi-mode archlinux ssh-agent dotenv autojump)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-alias tmux="TERM=screen-256color-bce tmux"
 alias mpd="nocorrect mpd"
 
 # nvm setup
