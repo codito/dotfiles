@@ -31,5 +31,8 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 alias mpd="nocorrect mpd"
 
+# dotnet setup
+export MSBuildSDKsPath=/opt/dotnet/sdk/$(dotnet --version)/Sdks
+
 # nvm setup
 #source /usr/share/nvm/init-nvm.sh
