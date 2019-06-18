@@ -36,3 +36,6 @@ export MSBuildSDKsPath=/opt/dotnet/sdk/$(dotnet --version)/Sdks
 
 # nvm setup
 #source /usr/share/nvm/init-nvm.sh
+
+# add yarn global dir to path
+export PATH="$(yarn global bin):$PATH"
