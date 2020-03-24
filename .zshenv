@@ -1,7 +1,7 @@
 # ZSH env file
 # sourced for all terminals
 # Created: Sat 29 Nov 2008 12:14:40 PM IST
-# Last Modified: 11/01/2020, 17:44:27 IST
+# Last Modified: 15/01/2020, 18:09:59 IST
 
 export EDITOR="vim"
 export PATH=${PATH}:$HOME/bin:$HOME/.yarn/bin
@@ -26,7 +26,7 @@ export PIPENV_VENV_IN_PROJECT=1
 #export ANDROID_SDK_ROOT=$HOME/src/_tools/android-sdk
 
 # dotnet setup
-export MSBuildSDKsPath=/opt/dotnet/sdk/$(dotnet --version)/Sdks
+export MSBuildSDKsPath=/usr/share/dotnet/sdk/$(dotnet --version)/Sdks
 
 # add yarn global dir to path
 export PATH="$(yarn global bin):$PATH"
