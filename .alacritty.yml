@@ -1,7 +1,7 @@
 # Alacritty settings
 #
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
-# Last Modified: 01/04/2020, 07:40:00 IST
+# Last Modified: 02/08/2020, 06:01:55 IST
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -45,6 +45,9 @@ window:
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background, but no title bar buttons
   decorations: none
+
+  # Allow terminal applications to change Alacritty's window title.
+  dynamic_title: true
 
   # Startup Mode (changes require restart)
   #
@@ -284,7 +287,7 @@ colors:
 #   - Linear
 #
 # Specifying a `duration` of `0` will disable the visual bell.
-visual_bell:
+bell:
   animation: EaseOutExpo
   duration: 0
   color: '0xffffff'
@@ -350,9 +353,6 @@ selection:
 
   # When set to `true`, selected text will be copied to the primary clipboard.
   save_to_clipboard: true
-
-# Allow terminal applications to change Alacritty's window title.
-dynamic_title: true
 
 cursor:
   # Cursor style
