@@ -1,6 +1,6 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-# Last Modified: 09/03/2019, 19:19:08 IST
+# Last Modified: 23/11/2020, 18:43:37 IST
 #
 
 ## Modifer {{{1
@@ -167,6 +167,9 @@ mode "apps" {
 bindsym $mod+o mode "apps"
 
 ## Global Keybindings {{{1
+# Lock screen
+bindsym $mod+mod1+l exec i3lock -c 000000 && sleep 5 && xset dpms force off
+
 # Screenshot
 bindsym Print exec maim -st 9999999 ~/$(date +%s).png
 bindsym Shift+Print exec scrot 'Screenshot-%Y-%m-%d_$wx$h.png'
@@ -188,5 +191,34 @@ bindsym XF86Calculator          exec mpc next >/dev/null && notify-send "$(mpc -
 
 ## Bar {{{1
 exec polybar primary
+
+## Theme {{{1
+# Gruvbox light
+# See https://github.com/khamer/base16-i3/blob/master/themes/base16-gruvbox-light-hard.config
+set $base00 #f9f5d7
+set $base01 #ebdbb2
+set $base02 #d5c4a1
+set $base03 #bdae93
+set $base04 #665c54
+set $base05 #504945
+set $base06 #3c3836
+set $base07 #282828
+set $base08 #9d0006
+set $base09 #af3a03
+set $base0A #b57614
+set $base0B #79740e
+set $base0C #427b58
+set $base0D #076678
+set $base0E #8f3f71
+set $base0F #d65d0e
+
+# Basic color configuration using the Base16 variables for windows and borders.
+# Property Name         Border  BG      Text    Indicator Child Border
+client.focused          $base05 $base0D $base00 $base0D $base0C
+client.focused_inactive $base01 $base01 $base05 $base03 $base01
+client.unfocused        $base01 $base00 $base05 $base01 $base01
+client.urgent           $base08 $base08 $base00 $base08 $base08
+client.placeholder      $base00 $base00 $base05 $base00 $base00
+client.background       $base07
 
 # vim: set tw=999:

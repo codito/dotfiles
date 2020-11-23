@@ -1,9 +1,20 @@
 ; Polybar configuration
 ; See documentation at https://github.com/jaagr/polybar/wiki/Configuration
-; Last Modified: 09/03/2019, 19:07:18 IST
+; Last Modified: 23/11/2020, 08:06:20 IST
+
+;[colors]
+;; Based on gruvbox light colors
+;background = #fbf1c7
+;background-alt = #f9f5d7
+;foreground = #7c6f64
+;foreground-alt = #bdae93
+;primary = #458588
+;secondary = #cc241d
+;alert = #689d6a
+;white = #3c3836
 
 [colors]
-; Based on gruvbox colors
+; Based on gruvbox dark colors
 background = #1d2021
 background-alt = #282828
 foreground = #a89984
