@@ -1,6 +1,6 @@
 ; Polybar configuration
 ; See documentation at https://github.com/jaagr/polybar/wiki/Configuration
-; Last Modified: 23/11/2020, 08:06:20 IST
+; Last Modified: 29/11/2020, 09:13:20 IST
 
 ;[colors]
 ;; Based on gruvbox light colors
@@ -63,7 +63,7 @@ font-0 = Dejavu Sans Mono:size=8;0
 
 modules-left = i3
 modules-center = xwindow
-modules-right = memory cpu date
+modules-right = memory cpu pulseaudio-control date
 
 tray-position = right
 tray-padding = 2
@@ -147,6 +147,19 @@ time = %H:%M
 time-alt = %H:%M:%S
 
 label = %date% %time%
+
+[module/pulseaudio-control]
+type = custom/script
+tail = true
+format-underline = #990f00
+label-padding = 2
+label-foreground = ${colors.foreground}
+exec = pulseaudio-control --sink-nicknames-from "device.description" --sink-nickname "alsa_output.pci-0000_07_00.1.hdmi-stereo-extra1: Speakers" --sink-nickname "alsa_output.pci-0000_12_00.3.analog-stereo: Headphones" listen
+click-right = exec pavucontrol &
+click-left = pulseaudio-control togmute
+click-middle = pulseaudio-control next-sink
+scroll-up = pulseaudio-control --volume-max 130 up
+scroll-down = pulseaudio-control --volume-max 130 down
 
 [settings]
 screenchange-reload = true
