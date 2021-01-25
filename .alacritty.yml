@@ -1,7 +1,7 @@
 # Alacritty settings
 #
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
-# Last Modified: 13/11/2020, 20:17:41 IST
+# Last Modified: 13/01/2021, 08:31:45 IST
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -79,7 +79,8 @@ font:
     #   - (macOS) Menlo
     #   - (Linux) monospace
     #   - (Windows) Consolas
-    family: Anonymous Pro
+    #family: Anonymous Pro
+    family: JetBrains Mono
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -90,7 +91,8 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Anonymous Pro
+    #family: Anonymous Pro
+    family: JetBrains Mono
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -101,7 +103,8 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Anonymous Pro
+    #family: Anonymous Pro
+    family: JetBrains Mono
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -136,71 +139,71 @@ font:
   #
   # This is a global setting and will require a log out or restart to take
   # effect.
-  use_thin_strokes: true
+  use_thin_strokes: false
 
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
 colors:
-  # Colors (Gruvbox light)
-  # Default colors
-  primary:
-    # hard contrast: background = '#f9f5d7'
-    background: '#fbf1c7'
-    # soft contrast: background = '#f2e5bc'
-    foreground: '#3c3836'
-
-  # Normal colors
-  normal:
-    black:   '#fbf1c7'
-    red:     '#cc241d'
-    green:   '#98971a'
-    yellow:  '#d79921'
-    blue:    '#458588'
-    magenta: '#b16286'
-    cyan:    '#689d6a'
-    white:   '#7c6f64'
-
-  # Bright colors
-  bright:
-    black:   '#928374'
-    red:     '#9d0006'
-    green:   '#79740e'
-    yellow:  '#b57614'
-    blue:    '#076678'
-    magenta: '#8f3f71'
-    cyan:    '#427b58'
-    white:   '#3c3836'
-
-  # Colors (Gruvbox dark)
-  # Default colors
+  ## Colors (Gruvbox light)
+  ## Default colors
   #primary:
-    ## hard contrast: background = '0x1d2021'
-    #background: '0x282828'
-    ## soft contrast: background = '0x32302f'
-    #foreground: '0xebdbb2'
+    ## hard contrast: background = '#f9f5d7'
+    #background: '#fbf1c7'
+    ## soft contrast: background = '#f2e5bc'
+    #foreground: '#3c3836'
 
   ## Normal colors
   #normal:
-    #black:   '0x282828'
-    #red:     '0xcc241d'
-    #green:   '0x98971a'
-    #yellow:  '0xd79921'
-    #blue:    '0x458588'
-    #magenta: '0xb16286'
-    #cyan:    '0x689d6a'
-    #white:   '0xa89984'
+    #black:   '#fbf1c7'
+    #red:     '#cc241d'
+    #green:   '#98971a'
+    #yellow:  '#d79921'
+    #blue:    '#458588'
+    #magenta: '#b16286'
+    #cyan:    '#689d6a'
+    #white:   '#7c6f64'
 
   ## Bright colors
   #bright:
-    #black:   '0x928374'
-    #red:     '0xfb4934'
-    #green:   '0xb8bb26'
-    #yellow:  '0xfabd2f'
-    #blue:    '0x83a598'
-    #magenta: '0xd3869b'
-    #cyan:    '0x8ec07c'
-    #white:   '0xebdbb2'
+    #black:   '#928374'
+    #red:     '#9d0006'
+    #green:   '#79740e'
+    #yellow:  '#b57614'
+    #blue:    '#076678'
+    #magenta: '#8f3f71'
+    #cyan:    '#427b58'
+    #white:   '#3c3836'
+
+  # Colors (Gruvbox dark)
+  # Default colors
+  primary:
+    # hard contrast: background = '0x1d2021'
+    background: '0x282828'
+    # soft contrast: background = '0x32302f'
+    foreground: '0xebdbb2'
+
+  # Normal colors
+  normal:
+    black:   '0x282828'
+    red:     '0xcc241d'
+    green:   '0x98971a'
+    yellow:  '0xd79921'
+    blue:    '0x458588'
+    magenta: '0xb16286'
+    cyan:    '0x689d6a'
+    white:   '0xa89984'
+
+  # Bright colors
+  bright:
+    black:   '0x928374'
+    red:     '0xfb4934'
+    green:   '0xb8bb26'
+    yellow:  '0xfabd2f'
+    blue:    '0x83a598'
+    magenta: '0xd3869b'
+    cyan:    '0x8ec07c'
+    white:   '0xebdbb2'
 
   ## Colors (Apprentice)
   #primary:

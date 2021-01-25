@@ -24,7 +24,7 @@ ZSH_THEME="juanghurtado"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git vi-mode archlinux ssh-agent dotenv autojump docker docker-compose)
+plugins=(git vi-mode archlinux ssh-agent dotenv autojump docker docker-compose gpg-agent)
 
 source $ZSH/oh-my-zsh.sh
 
