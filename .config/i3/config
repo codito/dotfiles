@@ -1,6 +1,6 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-# Last Modified: 05/01/2021, 09:51:30 IST
+# Last Modified: 18/02/2021, 10:22:18 IST
 #
 
 ## Modifer {{{1
@@ -112,6 +112,13 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
+
+# make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+# show the first scratchpad window
+bindsym $mod+minus scratchpad show
+# show the notes scratchpad window, if any
+bindsym $mod+n [title="GVIM$"] scratchpad show
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
