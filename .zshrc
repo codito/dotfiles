@@ -30,3 +30,5 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 alias mpd="nocorrect mpd"
+
+eval "$(starship init zsh)"
