@@ -1,4 +1,7 @@
 # See https://starship.rs/config
+[aws]
+disabled = true
+
 [directory]
 truncation_length = 8
 
