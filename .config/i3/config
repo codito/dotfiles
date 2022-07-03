@@ -1,6 +1,6 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-# Last Modified: 03/07/2022, 13:47:34 +0530
+# Last Modified: 03/07/2022, 22:18:24 +0530
 #
 
 ## Modifer {{{1
@@ -13,7 +13,8 @@ floating_modifier $mod
 ## Appearance {{{1
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:DejaVu Sans Mono 9
+#font pango:DejaVu Sans Mono 9
+font pango:Delugia 10
 # Do not use borders for windows or floats
 new_window none
 new_float none
@@ -36,8 +37,8 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
-bindsym $mod+r exec "dmenu_run -nb '#282828' -nf '#ebdbb2' -sb '#458588' -sf '#282828'"
+# start rofi (a program launcher)
+bindsym $mod+r exec "rofi -show combi"
 
 # change focus
 bindsym $mod+h focus left
