@@ -1,6 +1,6 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-# Last Modified: 18/02/2021, 10:22:18 IST
+# Last Modified: 03/07/2022, 13:47:34 +0530
 #
 
 ## Modifer {{{1
@@ -181,9 +181,9 @@ bindsym Print exec maim -st 9999999 ~/$(date +%s).png
 bindsym Shift+Print exec scrot 'Screenshot-%Y-%m-%d_$wx$h.png'
 
 # Volume
-bindsym XF86AudioRaiseVolume exec ~/bin/voltun -c up -i 3% -m Master
-bindsym XF86AudioMute        exec ~/bin/voltun -c mute -i 3% -m Master
-bindsym Shift+XF86AudioRaiseVolume exec ~/bin/voltun -c down -i 3% -m Master
+bindsym XF86AudioRaiseVolume exec pulseaudio-control up
+bindsym XF86AudioMute        exec pulseaudio-control togmute
+bindsym XF86AudioLowerVolume exec pulseaudio-control down
 
 # Multimedia Keys
 bindsym Shift+XF86AudioNext     exec mpc seek +00:00:05 >/dev/null

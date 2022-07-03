@@ -1,7 +1,7 @@
 # Alacritty settings
 #
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
-# Last Modified: 26/05/2021, 09:34:28 IST
+# Last Modified: 01/07/2022, 00:14:26 +0530
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -80,7 +80,8 @@ font:
     #   - (Linux) monospace
     #   - (Windows) Consolas
     #family: Anonymous Pro
-    family: JetBrains Mono
+    #family: JetBrains Mono
+    family: Delugia
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -92,7 +93,7 @@ font:
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
     #family: Anonymous Pro
-    family: JetBrains Mono
+    family: Delugia
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -104,7 +105,7 @@ font:
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
     #family: Anonymous Pro
-    family: JetBrains Mono
+    family: Delugia
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -329,7 +330,7 @@ bell:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 1.0
+window_opacity: 1.0
 
 # Mouse bindings
 #
