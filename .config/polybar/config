@@ -1,6 +1,6 @@
 ; Polybar configuration
 ; See documentation at https://github.com/jaagr/polybar/wiki/Configuration
-; Last Modified: 05/03/2021, 21:53:52 IST
+; Last Modified: 03/07/2022, 15:43:39 +0530
 
 ;[colors]
 ;; Based on gruvbox light colors
@@ -153,7 +153,7 @@ label = %percentage_used%%
 type = internal/date
 interval = 60
 
-date = %d-%b
+date = %d-%b (w%U) 
 date-alt = " %Y-%m-%d"
 
 time = %H:%M
@@ -167,7 +167,7 @@ tail = true
 ;format-underline = #990f00
 ;label-padding = 2
 label-foreground = ${colors.foreground}
-exec = pulseaudio-control --sink-nicknames-from "device.description" --sink-nickname "alsa_output.pci-0000_07_00.1.hdmi-stereo-extra1: " --sink-nickname "alsa_output.pci-0000_07_00.1.hdmi-stereo: " --sink-nickname "alsa_output.pci-0000_12_00.3.analog-stereo: " listen
+exec = pulseaudio-control --sink-nicknames-from "alsa.name" --icon-sink "" listen
 click-right = exec pavucontrol &
 click-left = pulseaudio-control togmute
 click-middle = pulseaudio-control next-sink
