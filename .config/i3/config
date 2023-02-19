@@ -1,6 +1,6 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-# Last Modified: 03/07/2022, 22:18:24 +0530
+# Last Modified: 19/02/2023, 22:41:21 +0530
 #
 
 ## Modifer {{{1
@@ -155,24 +155,6 @@ mode "resize" {
 
 bindsym $mod+Shift+w mode "resize"
 
-# Application shortcuts
-mode "apps" {
-    bindsym b exec firefox
-    bindsym Shift+b exec firefox-developer-edition
-    bindsym c exec chromium
-    bindsym e exec gvim
-    bindsym E exec alacritty -e /usr/bin/vim
-    bindsym f exec nautilus
-    bindsym n exec QOwnNotes
-    bindsym o exec foliate
-
-    # back to normal: Enter or Escape
-    bindsym Escape mode "default"
-    bindsym Return mode "default"
-}
-
-bindsym $mod+o mode "apps"
-
 ## Global Keybindings {{{1
 # Lock screen
 bindsym $mod+mod1+l exec i3lock -c 000000 && sleep 5 && xset dpms force off
@@ -199,6 +181,9 @@ bindsym XF86Calculator          exec mpc next >/dev/null && notify-send "$(mpc -
 ## Bar {{{1
 exec polybar primary
 bindsym $mod+b exec polybar-msg cmd toggle
+
+## Compositor {{{1
+exec picom
 
 ## Theme {{{1
 # Base16 Gruvbox dark, medium
