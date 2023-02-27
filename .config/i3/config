@@ -1,6 +1,6 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-# Last Modified: 21/02/2023, 00:38:39 +0530
+# Last Modified: 27/02/2023, 23:35:41 +0530
 #
 
 ## Modifer {{{1
@@ -184,6 +184,10 @@ bindsym $mod+b exec polybar-msg cmd toggle
 
 ## Compositor {{{1
 exec --no-startup-id picom -CGb
+
+## Other startup apps {{{1
+exec gammastep-indicator &
+exec blueman-applet &
 
 ## Theme {{{1
 # Base16 Gruvbox dark, medium
