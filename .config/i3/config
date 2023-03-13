@@ -1,6 +1,6 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-# Last Modified: 27/02/2023, 23:35:41 +0530
+# Last Modified: 14/03/2023, 01:03:04 +0530
 #
 
 ## Modifer {{{1
@@ -180,14 +180,18 @@ bindsym XF86Calculator          exec mpc next >/dev/null && notify-send "$(mpc -
 
 ## Bar {{{1
 exec polybar primary
+exec polybar secondary
 bindsym $mod+b exec polybar-msg cmd toggle
+
+## Monitor {{{1
+exec --no-startup-id autorandr --change
 
 ## Compositor {{{1
 exec --no-startup-id picom -CGb
 
 ## Other startup apps {{{1
 exec gammastep-indicator &
-exec blueman-applet &
+exec blueberry-tray &
 
 ## Theme {{{1
 # Base16 Gruvbox dark, medium
