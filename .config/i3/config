@@ -1,6 +1,6 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-# Last Modified: 14/03/2023, 01:03:04 +0530
+# Last Modified: 19/03/2023, 13:27:29 +0530
 #
 
 ## Modifer {{{1
@@ -191,7 +191,7 @@ exec --no-startup-id picom -CGb
 
 ## Other startup apps {{{1
 exec gammastep-indicator &
-exec blueberry-tray &
+exec blueman-applet &
 
 ## Theme {{{1
 # Base16 Gruvbox dark, medium
