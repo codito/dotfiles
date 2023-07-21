@@ -1,9 +1,9 @@
 # ZSH env file
 # sourced for all terminals
 # Created: Sat 29 Nov 2008 12:14:40 PM IST
-# Last Modified: 26/09/2020, 17:20:55 IST
+# Last Modified: 16/06/2023, 23:16:00 +0530
 
-export EDITOR="vim"
+export EDITOR="nvim"
 export PATH=${PATH}:$HOME/bin:$HOME/.yarn/bin
 #PYTHONHOME="/usr:/usr"
 
