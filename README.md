@@ -33,3 +33,12 @@ Run the following on a new machine.
 ```
 
 Install `starship` and `autojump-rs` for the system.
+
+Setup tmux plugins.
+
+```sh
+> git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+> tmux source ~/.tmux.conf
+
+# Press Prefix+I to install all plugins.
+```
