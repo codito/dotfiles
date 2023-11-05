@@ -1,6 +1,6 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-# Last Modified: 19/03/2023, 13:27:29 +0530
+# Last Modified: 05/11/2023, 07:20:43 +0530
 #
 
 ## Modifer {{{1
@@ -190,6 +190,7 @@ exec --no-startup-id autorandr --change
 exec --no-startup-id picom -CGb
 
 ## Other startup apps {{{1
+exec --no-startup-id pcmanfm --daemon-mode
 exec gammastep-indicator &
 exec blueman-applet &
 
