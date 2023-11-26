@@ -1,6 +1,6 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-# Last Modified: 05/11/2023, 07:20:43 +0530
+# Last Modified: 26/11/2023, 09:34:08 +0530
 #
 
 ## Modifer {{{1
@@ -160,8 +160,7 @@ bindsym $mod+Shift+w mode "resize"
 bindsym $mod+mod1+l exec i3lock -c 000000 && sleep 5 && xset dpms force off
 
 # Screenshot
-bindsym Print exec maim -st 9999999 ~/$(date +%s).png
-bindsym Shift+Print exec scrot 'Screenshot-%Y-%m-%d_$wx$h.png'
+bindsym Print exec flameshot gui
 
 # Volume
 bindsym XF86AudioRaiseVolume exec pulseaudio-control up
