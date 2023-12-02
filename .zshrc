@@ -31,4 +31,9 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 alias mpd="nocorrect mpd"
 
-eval "$(starship init zsh)"
+if command -v starship &> /dev/null; then
+    eval "$(starship init zsh)"
+fi
+if command -v mcfly &> /dev/null; then
+    eval "$(mcfly init zsh)"
+fi
