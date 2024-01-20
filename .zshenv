@@ -1,23 +1,11 @@
 # ZSH env file
 # sourced for all terminals
 # Created: Sat 29 Nov 2008 12:14:40 PM IST
-# Last Modified: 16/06/2023, 23:16:00 +0530
+# Last Modified: 20/01/2024, 23:18:17 +0530
 
 export EDITOR="nvim"
-export PATH=${PATH}:$HOME/bin:$HOME/.yarn/bin
+export PATH=${PATH}:$HOME/.local/bin:$HOME/.yarn/bin:$HOME/bin
 #PYTHONHOME="/usr:/usr"
-
-# Python VirtualEnv
-# pipenv: use .venv directory in project for virtual environments
-export PIPENV_VENV_IN_PROJECT=1
-#export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
-#export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
-#export WORKON_HOME=/misc/sandbox/virtualenvs
-#source /usr/bin/virtualenvwrapper.sh
-
-# VirtualEnv + Pip goodness
-#export PIP_VIRTUALENV_BASE=$WORKON_HOME
-#export PIP_RESPECT_VIRTUALENV=true
 
 # Nodejs
 #export NODE_PATH=/usr/lib/jsctags:/usr/lib/node_modules
