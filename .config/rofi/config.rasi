@@ -1,6 +1,6 @@
 configuration {
         modi: "window,drun,run,windowcd,filebrowser,combi";
-        font: "Delugia 10";
+        font: "Iosevka Aile 10";
         combi-modi: "window,drun,run,windowcd,filebrowser";
         show-icons: true;
         icon-theme: "Papirus";
@@ -145,4 +145,4 @@ configuration {
       sorting-method:    "name";
   }
 }
-@theme "gruvbox-dark"
+@theme "gruvbox-light"

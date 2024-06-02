@@ -1,0 +1,85 @@
+# Example configuration for aye app
+#
+# Looked up from XDG_CONFIG_DIR (~/.config/aye/aye.yml) on Linux or
+# ~/.aye on Windows.
+
+models:
+  nous-hermes-2-solar-10.7b:
+    path: ~/docs/models/nous-hermes-2-solar-10.7b/nous-hermes-2-solar-10.7b.Q4_K_M.gguf
+    type: mistral
+    template: chatml
+  yi-1.5-9b-chat:
+    path: ~/docs/models/yi-1.5-9b-chat/Yi-1.5-9B-Chat-Q5_K_M.gguf
+    type: llama
+    template: chatml
+  llama-3-8b-instruct:
+    path: ~/docs/models/llama-3-8b-instruct/Meta-Llama-3-8B-Instruct.Q4_K_M.gguf
+    type: llama3
+    template: llama3
+  openhermes25-mistral-7b:
+    path: ~/docs/models/openhermes-25-mistral-7b/openhermes-2.5-mistral-7b.Q5_K_M.gguf
+    type: mistral
+    template: chatml
+  alphamonarch-7b:
+    path: ~/docs/models/alphamonarch-7b/alphamonarch-7b.Q4_K_M.gguf
+    type: mistral
+    template: chatml
+  westlake-7b-v2:
+    path: ~/docs/models/westlake-7b-v2/WestLake-7b-v2-q4_k_m.gguf
+    type: mistral
+    template: chatml
+  magicoder-s-ds-6.7b: # doesn't work https://github.com/ggerganov/llama.cpp/issues/4419
+    path: ~/docs/models/magicoder-s-ds-6.7b/magicoder-s-ds-6.7b.Q4_K_M.gguf
+    type: deepseek
+    template: magicoder
+  deepseek-coder-6.7b:
+    path: ~/docs/models/deepseek-coder-6.7b/deepseek-coder-6.7b-instruct.Q5_K_M.gguf
+    type: deepseek
+    template: alpaca
+  ollama-tinydolphin-latest:
+    name: tinydolphin:latest
+    type: ollama
+    template: chatml
+
+profiles:
+  zero:
+    # factual responses and straightforward assistant answers
+    temperature: 0
+    repeat_penalty: 1.176
+    top_k: 40
+    top_p: 0.1
+  # See https://www.reddit.com/r/LocalLLaMA/comments/1343bgz/what_model_parameters_is_everyone_using/
+  precise:
+    # factual responses and straightforward assistant answers
+    temperature: 0.7
+    repeat_penalty: 1.176
+    top_k: 40
+    top_p: 0.1
+  creative:
+    # chatting, storywriting, and interesting assistant answers
+    temperature: 0.72
+    repeat_penalty: 1.1
+    top_k: 0
+    top_p: 0.73
+  sphinx:
+    # varied storywriting (on 30B/65B) and unconventional chatting
+    temperature: 1.99
+    repeat_penalty: 1.15
+    top_k: 30
+    top_p: 0.18
+
+chat:
+  # model: nous-hermes-2-solar-10.7b
+  model: yi-1.5-9b-chat
+  profile: precise
+  settings:
+    n_threads: 11
+    n_gpu_layers: 18
+task:
+  model: westlake-7b-v2
+  # model: openhermes25-mistral-7b
+  # model: ollama-tinydolphin-latest
+  profile: precise
+  settings:
+    n_threads: 11
+    n_gpu_layers: 18
