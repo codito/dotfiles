@@ -1,11 +1,10 @@
 # ZSH env file
 # sourced for all terminals
 # Created: Sat 29 Nov 2008 12:14:40 PM IST
-# Last Modified: 20/01/2024, 23:18:17 +0530
+# Last Modified: 26/06/2024, 16:38:15 +0530
 
 export EDITOR="nvim"
-export PATH=${PATH}:$HOME/.local/bin:$HOME/.yarn/bin:$HOME/bin
-#PYTHONHOME="/usr:/usr"
+export PATH=${PATH}:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.yarn/bin:$HOME/bin
 
 # Nodejs
 #export NODE_PATH=/usr/lib/jsctags:/usr/lib/node_modules
@@ -18,9 +17,4 @@ fi
 # dotnet setup
 if [ -x "$(command -v dotnet)" ]; then
     export MSBuildSDKsPath=/usr/share/dotnet/sdk/$(dotnet --version)/Sdks
-fi
-
-# add yarn global dir to path
-if [ -x "$(command -v yarn)" ]; then
-    export PATH="$(yarn global bin):$PATH"
 fi
