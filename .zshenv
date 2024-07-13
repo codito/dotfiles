@@ -1,7 +1,7 @@
 # ZSH env file
 # sourced for all terminals
 # Created: Sat 29 Nov 2008 12:14:40 PM IST
-# Last Modified: 26/06/2024, 16:38:15 +0530
+# Last Modified: 29/06/2024, 22:39:42 +0530
 
 export EDITOR="nvim"
 export PATH=${PATH}:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.yarn/bin:$HOME/bin
@@ -18,3 +18,5 @@ fi
 if [ -x "$(command -v dotnet)" ]; then
     export MSBuildSDKsPath=/usr/share/dotnet/sdk/$(dotnet --version)/Sdks
 fi
+
+export WLR_RENDERER=vulkan

@@ -1,9 +1,29 @@
 # Example configuration for aye app
 #
-# Looked up from XDG_CONFIG_DIR (~/.config/aye/aye.yml) on Linux or
-# ~/.aye on Windows.
+# Looked up from XDG_CONFIG_DIR (~/.config/arey/arey.yml) on Linux or
+# ~/.arey on Windows.
 
 models:
+  phi-3.1-mini-4k-instruct:
+    path: ~/docs/models/phi-3.1-mini-4k-instruct/Phi-3.1-mini-4k-instruct-Q5_K_M.gguf
+    type: phi3
+    template: phi3
+  gemma2-9b-it-sppo-iter3:
+    path: ~/docs/models/gemma-2-9b-it/Gemma-2-9B-It-SPPO-Iter3-Q4_K_L.gguf
+    type: gemma2
+    template: gemma2
+  gemma2-9b-it:
+    path: ~/docs/models/gemma-2-9b-it/gemma-2-9b-it-Q4_K_L.gguf
+    type: gemma2
+    template: gemma2
+  codegeex4-9b:
+    path: ~/docs/models/codegeex4-all-9b/codegeex4-all-9b-Q4_K_M.gguf
+    type: codegeex4
+    template: codegeex4
+  phi-3-medium-4k-instruct:
+    path: ~/docs/models/phi-3-medium-4k-instruct/Phi-3-medium-4k-instruct-Q4_K_M.gguf
+    type: phi3
+    template: phi3
   nous-hermes-2-solar-10.7b:
     path: ~/docs/models/nous-hermes-2-solar-10.7b/nous-hermes-2-solar-10.7b.Q4_K_M.gguf
     type: mistral
@@ -20,18 +40,10 @@ models:
     path: ~/docs/models/openhermes-25-mistral-7b/openhermes-2.5-mistral-7b.Q5_K_M.gguf
     type: mistral
     template: chatml
-  alphamonarch-7b:
-    path: ~/docs/models/alphamonarch-7b/alphamonarch-7b.Q4_K_M.gguf
-    type: mistral
-    template: chatml
   westlake-7b-v2:
     path: ~/docs/models/westlake-7b-v2/WestLake-7b-v2-q4_k_m.gguf
     type: mistral
     template: chatml
-  magicoder-s-ds-6.7b: # doesn't work https://github.com/ggerganov/llama.cpp/issues/4419
-    path: ~/docs/models/magicoder-s-ds-6.7b/magicoder-s-ds-6.7b.Q4_K_M.gguf
-    type: deepseek
-    template: magicoder
   deepseek-coder-6.7b:
     path: ~/docs/models/deepseek-coder-6.7b/deepseek-coder-6.7b-instruct.Q5_K_M.gguf
     type: deepseek
@@ -45,8 +57,8 @@ profiles:
   zero:
     # factual responses and straightforward assistant answers
     temperature: 0
-    repeat_penalty: 1.176
-    top_k: 40
+    repeat_penalty: 0.95
+    top_k: 20
     top_p: 0.1
   # See https://www.reddit.com/r/LocalLLaMA/comments/1343bgz/what_model_parameters_is_everyone_using/
   precise:
@@ -70,11 +82,11 @@ profiles:
 
 chat:
   # model: nous-hermes-2-solar-10.7b
-  model: yi-1.5-9b-chat
-  profile: precise
+  model: gemma2-9b-it-sppo-iter3
+  profile: zero
   settings:
     n_threads: 11
-    n_gpu_layers: 18
+    n_gpu_layers: 6
 task:
   model: westlake-7b-v2
   # model: openhermes25-mistral-7b
