@@ -82,7 +82,7 @@ profiles:
 
 chat:
   # model: nous-hermes-2-solar-10.7b
-  model: gemma2-9b-it-sppo-iter3
+  model: codegeex4-9b
   profile: zero
   settings:
     n_threads: 11
