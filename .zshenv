@@ -1,7 +1,7 @@
 # ZSH env file
 # sourced for all terminals
 # Created: Sat 29 Nov 2008 12:14:40 PM IST
-# Last Modified: 29/07/2024, 20:53:56 +0530
+# Last Modified: 01/09/2024, 21:10:11 +0530
 
 export EDITOR="nvim"
 export PATH=${PATH}:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.yarn/bin:$HOME/bin
@@ -21,3 +21,5 @@ fi
 
 export WLR_RENDERER=vulkan
 export HF_HOME=$HOME/.local/share/huggingface
+
+source ~HOME/.config/.env
