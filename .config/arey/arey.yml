@@ -93,12 +93,12 @@ profiles:
     top_p: 0.18
 
 chat:
-  model: llamacpp-server
-  profile: zero
+  model: gemma2-9b-it-sppo-iter3
+  profile: precise
   settings:
-    base_url: http://localhost:8080
-    # n_threads: 11
-    # n_gpu_layers: 99
+    # base_url: http://localhost:8080
+    n_threads: 11
+    n_gpu_layers: 8
 task:
   model: llamacpp-server
   profile: precise
