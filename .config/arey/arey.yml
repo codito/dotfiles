@@ -7,63 +7,33 @@ models:
   llamacpp-server:
     name: gemma2-9b-it-sppo-iter3
     type: openai
-    template: gemma2
   gemma2-2b-it:
     path: ~/docs/models/gemma-2/gemma-2-2b-it-Q6_K_L.gguf
-    type: gemma2
-    template: gemma2
+    type: gguf
   phi-3.1-mini-4k-instruct:
     path: ~/docs/models/phi-3.1-mini-4k-instruct/Phi-3.1-mini-4k-instruct-Q5_K_M.gguf
-    type: phi3
-    template: phi3
+    type: gguf
+  gemma2-9b-atarax:
+    path: ~/docs/models/gemma-2/Gemma-2-Ataraxy-9B-Q4_K_L.gguf
+    type: gguf
   gemma2-9b-it-sppo-iter3:
     path: ~/docs/models/gemma-2/Gemma-2-9B-It-SPPO-Iter3-Q4_K_L.gguf
-    type: gemma2
-    template: gemma2
+    type: gguf
   gemma2-9b-it:
     path: ~/docs/models/gemma-2/gemma-2-9b-it-Q4_K_L.gguf
-    type: gemma2
-    template: gemma2
+    type: gguf
   codegeex4-9b:
     path: ~/docs/models/codegeex4-all-9b/codegeex4-all-9b-Q4_K_M.gguf
-    type: codegeex4
-    template: codegeex4
+    type: gguf
   llama-3.1-8b-instruct:
     path: ~/docs/models/llama-3.1-8b-instruct/Meta-Llama-3.1-8B-Instruct-Q5_K_L.gguf
-    type: llama3
-    template: llama3
+    type: gguf
   phi-3-medium-4k-instruct:
     path: ~/docs/models/phi-3-medium-4k-instruct/Phi-3-medium-4k-instruct-Q4_K_M.gguf
-    type: phi3
-    template: phi3
-  nous-hermes-2-solar-10.7b:
-    path: ~/docs/models/nous-hermes-2-solar-10.7b/nous-hermes-2-solar-10.7b.Q4_K_M.gguf
-    type: mistral
-    template: chatml
-  yi-1.5-9b-chat:
-    path: ~/docs/models/yi-1.5-9b-chat/Yi-1.5-9B-Chat-Q5_K_M.gguf
-    type: llama
-    template: chatml
-  llama-3-8b-instruct:
-    path: ~/docs/models/llama-3-8b-instruct/Meta-Llama-3-8B-Instruct.Q4_K_M.gguf
-    type: llama3
-    template: llama3
-  openhermes25-mistral-7b:
-    path: ~/docs/models/openhermes-25-mistral-7b/openhermes-2.5-mistral-7b.Q5_K_M.gguf
-    type: mistral
-    template: chatml
-  westlake-7b-v2:
-    path: ~/docs/models/westlake-7b-v2/WestLake-7b-v2-q4_k_m.gguf
-    type: mistral
-    template: chatml
-  deepseek-coder-6.7b:
-    path: ~/docs/models/deepseek-coder-6.7b/deepseek-coder-6.7b-instruct.Q5_K_M.gguf
-    type: deepseek
-    template: alpaca
+    type: gguf
   ollama-tinydolphin-latest:
     name: tinydolphin:latest
     type: ollama
-    template: chatml
 
 profiles:
   zero:
@@ -93,12 +63,12 @@ profiles:
     top_p: 0.18
 
 chat:
-  model: gemma2-9b-it-sppo-iter3
+  model: gemma2-9b-atarax
   profile: precise
   settings:
     # base_url: http://localhost:8080
     n_threads: 11
-    n_gpu_layers: 8
+    n_gpu_layers: 14
 task:
   model: llamacpp-server
   profile: precise
