@@ -1,7 +1,7 @@
 # ZSH env file
 # sourced for all terminals
 # Created: Sat 29 Nov 2008 12:14:40 PM IST
-# Last Modified: 01/09/2024, 21:10:11 +0530
+# Last Modified: 04/10/2024, 23:32:14 +0530
 
 export EDITOR="nvim"
 export PATH=${PATH}:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.yarn/bin:$HOME/bin
@@ -21,5 +21,8 @@ fi
 
 export WLR_RENDERER=vulkan
 export HF_HOME=$HOME/.local/share/huggingface
+
+# Create virtual env at .venv dir
+export PYTHON_VENV_NAME=.venv
 
 source ~HOME/.config/.env

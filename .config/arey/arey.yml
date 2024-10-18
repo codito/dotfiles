@@ -2,33 +2,82 @@
 #
 # Looked up from XDG_CONFIG_DIR (~/.config/arey/arey.yml) on Linux or
 # ~/.arey on Windows.
+#
 
+# Reusable model configurations
+# For <=3B models: max out GPU and CPU threads.
+max_gpu: &max_gpu
+  n_threads: 11
+  n_gpu_layers: 99
+
+# For ~7B models
+big_gpu: &big_gpu
+  n_threads: 11
+  n_gpu_layers: 20
+
+# For ~9B models
+med_gpu: &med_gpu
+  n_threads: 11
+  n_gpu_layers: 14
+
+# For ~13B models
+small_gpu: &small_gpu
+  n_threads: 11
+  n_gpu_layers: 14
+
+# Ordered by size and favorites within same size segment
 models:
+  groq:
+    name: llama-3.1-70b-versatile
+    type: openai
+    base_url: https://api.groq.com/openai/v1
+    api_key: env:GROQ_API_KEY # defined as env variable
   llamacpp-server:
     name: gemma2-9b-it-sppo-iter3
     type: openai
+    base_url: "http://localhost:8080"
+  qwen2.5-3b:
+    <<: *max_gpu
+    path: ~/docs/models/qwen/Qwen2.5-3B-Instruct-Q5_K_L.gguf
+    type: gguf
+  llama-3.2-3b:
+    <<: *max_gpu
+    path: ~/docs/models/llama/Llama-3.2-3B-Instruct-Q5_K_L.gguf
+    type: gguf
   gemma2-2b-it:
+    <<: *max_gpu
     path: ~/docs/models/gemma-2/gemma-2-2b-it-Q6_K_L.gguf
     type: gguf
   phi-3.1-mini-4k-instruct:
+    <<: *max_gpu
     path: ~/docs/models/phi-3.1-mini-4k-instruct/Phi-3.1-mini-4k-instruct-Q5_K_M.gguf
     type: gguf
+  replete-qwen2.5-7b:
+    <<: *big_gpu
+    path: ~/docs/models/qwen/Replete-LLM-V2.5-Qwen-7b-Q4_K_M.gguf
+    type: gguf
   gemma2-9b-atarax:
+    <<: *med_gpu
     path: ~/docs/models/gemma-2/Gemma-2-Ataraxy-9B-Q4_K_L.gguf
     type: gguf
   gemma2-9b-it-sppo-iter3:
+    <<: *med_gpu
     path: ~/docs/models/gemma-2/Gemma-2-9B-It-SPPO-Iter3-Q4_K_L.gguf
     type: gguf
   gemma2-9b-it:
+    <<: *med_gpu
     path: ~/docs/models/gemma-2/gemma-2-9b-it-Q4_K_L.gguf
     type: gguf
   codegeex4-9b:
+    <<: *med_gpu
     path: ~/docs/models/codegeex4-all-9b/codegeex4-all-9b-Q4_K_M.gguf
     type: gguf
   llama-3.1-8b-instruct:
+    <<: *big_gpu
     path: ~/docs/models/llama-3.1-8b-instruct/Meta-Llama-3.1-8B-Instruct-Q5_K_L.gguf
     type: gguf
   phi-3-medium-4k-instruct:
+    <<: *small_gpu
     path: ~/docs/models/phi-3-medium-4k-instruct/Phi-3-medium-4k-instruct-Q4_K_M.gguf
     type: gguf
   ollama-tinydolphin-latest:
@@ -63,16 +112,8 @@ profiles:
     top_p: 0.18
 
 chat:
-  model: gemma2-9b-atarax
+  model: qwen2.5-3b
   profile: precise
-  settings:
-    # base_url: http://localhost:8080
-    n_threads: 11
-    n_gpu_layers: 14
 task:
   model: llamacpp-server
   profile: precise
-  settings:
-    base_url: http://localhost:8080
-    # n_threads: 11
-    # n_gpu_layers: 18
