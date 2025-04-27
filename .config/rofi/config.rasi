@@ -145,5 +145,6 @@ configuration {
       sorting-method:    "name";
   }
 }
-@theme "gruvbox-dark"
-/*@theme "gruvbox-light"*/
+// @theme "gruvbox-dark"
+// @theme "gruvbox-light"
+@theme "catppuccin-default"

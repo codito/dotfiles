@@ -1,7 +1,7 @@
 # ZSH env file
 # sourced for all terminals
 # Created: Sat 29 Nov 2008 12:14:40 PM IST
-# Last Modified: 04/10/2024, 23:32:14 +0530
+# Last Modified: 03/04/2025, 16:12:01 +0530
 
 export EDITOR="nvim"
 export PATH=${PATH}:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.yarn/bin:$HOME/bin
@@ -18,6 +18,9 @@ fi
 if [ -x "$(command -v dotnet)" ]; then
     export MSBuildSDKsPath=/usr/share/dotnet/sdk/$(dotnet --version)/Sdks
 fi
+
+# aider
+export AIDER_ANALYTICS_DISABLE=true
 
 export WLR_RENDERER=vulkan
 export HF_HOME=$HOME/.local/share/huggingface

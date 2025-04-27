@@ -1,6 +1,6 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-# Last Modified: 02/06/2024, 16:39:53 +0530
+# Last Modified: 25/04/2025, 16:20:02 +0530
 #
 
 ## Modifer {{{1
@@ -191,7 +191,7 @@ exec --no-startup-id picom -CGb
 ## Other startup apps {{{1
 exec --no-startup-id pcmanfm --daemon-mode
 exec gammastep-indicator &
-exec blueman-applet &
+# exec blueman-applet &
 exec --no-startup-id dex --autostart --environment i3
 
 ## Theme {{{1
@@ -216,30 +216,66 @@ exec --no-startup-id dex --autostart --environment i3
 
 # Gruvbox light
 # See https://github.com/khamer/base16-i3/blob/master/themes/base16-gruvbox-light-hard.config
-set $base00 #f9f5d7
-set $base01 #ebdbb2
-set $base02 #d5c4a1
-set $base03 #bdae93
-set $base04 #665c54
-set $base05 #504945
-set $base06 #3c3836
-set $base07 #282828
-set $base08 #9d0006
-set $base09 #af3a03
-set $base0A #b57614
-set $base0B #79740e
-set $base0C #427b58
-set $base0D #076678
-set $base0E #8f3f71
-set $base0F #d65d0e
+# set $base00 #f9f5d7
+# set $base01 #ebdbb2
+# set $base02 #d5c4a1
+# set $base03 #bdae93
+# set $base04 #665c54
+# set $base05 #504945
+# set $base06 #3c3836
+# set $base07 #282828
+# set $base08 #9d0006
+# set $base09 #af3a03
+# set $base0A #b57614
+# set $base0B #79740e
+# set $base0C #427b58
+# set $base0D #076678
+# set $base0E #8f3f71
+# set $base0F #d65d0e
 
 # Basic color configuration using the Base16 variables for windows and borders.
 # Property Name         Border  BG      Text    Indicator Child Border
-client.focused          $base05 $base0D $base00 $base0D $base0C
-client.focused_inactive $base01 $base01 $base05 $base03 $base01
-client.unfocused        $base01 $base00 $base05 $base01 $base01
-client.urgent           $base08 $base08 $base00 $base08 $base08
-client.placeholder      $base00 $base00 $base05 $base00 $base00
-client.background       $base07
+# client.focused          $base05 $base0D $base00 $base0D $base0C
+# client.focused_inactive $base01 $base01 $base05 $base03 $base01
+# client.unfocused        $base01 $base00 $base05 $base01 $base01
+# client.urgent           $base08 $base08 $base00 $base08 $base08
+# client.placeholder      $base00 $base00 $base05 $base00 $base00
+# client.background       $base07
+
+# Catppuccin Latte
+set $rosewater #dc8a78
+set $flamingo #dd7878
+set $pink #ea76cb
+set $mauve #8839ef
+set $red #d20f39
+set $maroon #e64553
+set $peach #fe640b
+set $yellow #df8e1d
+set $green #40a02b
+set $teal #179299
+set $sky #04a5e5
+set $sapphire #209fb5
+set $blue #1e66f5
+set $lavender #7287fd
+set $text #4c4f69
+set $subtext1 #5c5f77
+set $subtext0 #6c6f85
+set $overlay2 #7c7f93
+set $overlay1 #8c8fa1
+set $overlay0 #9ca0b0
+set $surface2 #acb0be
+set $surface1 #bcc0cc
+set $surface0 #ccd0da
+set $base #eff1f5
+set $mantle #e6e9ef
+set $crust #dce0e8
+
+# target                 title     bg    text   indicator  border
+client.focused           $lavender $base $text  $rosewater $lavender
+client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
+client.unfocused         $overlay0 $base $text  $rosewater $overlay0
+client.urgent            $peach    $base $peach $overlay0  $peach
+client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
+client.background        $base
 
 # vim: set tw=999:
