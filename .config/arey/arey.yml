@@ -1,4 +1,4 @@
-# Example configuration for aye app
+# Example configuration for arey app
 #
 # Looked up from XDG_CONFIG_DIR (~/.config/arey/arey.yml) on Linux or
 # ~/.arey on Windows.
@@ -27,15 +27,52 @@ small_gpu: &small_gpu
 
 # Ordered by size and favorites within same size segment
 models:
-  groq:
-    name: llama-3.1-70b-versatile
+  kimi-k2:
+    name: moonshotai/kimi-k2-instruct
     type: openai
     base_url: https://api.groq.com/openai/v1
     api_key: env:GROQ_API_KEY # defined as env variable
+  llama-70b:
+    name: llama-3.3-70b-versatile
+    type: openai
+    base_url: https://api.groq.com/openai/v1
+    api_key: env:GROQ_API_KEY # defined as env variable
+  gemini-flash:
+    name: gemini-2.5-flash
+    type: openai
+    base_url: https://generativelanguage.googleapis.com/v1beta/openai
+    api_key: env:GEMINI_API_KEY
+  gemini-flash-lite:
+    name: gemini-2.5-flash-lite-preview-06-17
+    type: openai
+    base_url: https://generativelanguage.googleapis.com/v1beta/openai
+    api_key: env:GEMINI_API_KEY
+  or-kimi-k2:
+    name: moonshotai/kimi-k2:free
+    type: openai
+    base_url: https://openrouter.ai/api/v1
+    api_key: env:OPENROUTER_API_KEY
+  or-gemma-27b:
+    name: deepseek/deepseek-chat-v3-0324:free
+    type: openai
+    base_url: https://openrouter.ai/api/v1
+    api_key: env:OPENROUTER_API_KEY
   llamacpp-server:
     name: gemma2-9b-it-sppo-iter3
     type: openai
     base_url: "http://localhost:8080"
+  jan-4b:
+    <<: *max_gpu
+    path: ~/docs/models/jan/jan-nano-4b-iQ4_XS.gguf
+    type: gguf
+  lucy-2b:
+    <<: *max_gpu
+    path: ~/docs/models/jan/jan-lucy-128k-Q6_K_L.gguf
+    type: gguf
+  qwen3-4b:
+    <<: *max_gpu
+    path: ~/docs/models/qwen/Qwen3-4B-UD-Q4_K_XL.gguf
+    type: gguf
   qwen2.5-3b:
     <<: *max_gpu
     path: ~/docs/models/qwen/Qwen2.5-3B-Instruct-Q5_K_L.gguf
@@ -52,9 +89,9 @@ models:
     <<: *max_gpu
     path: ~/docs/models/phi-3.1-mini-4k-instruct/Phi-3.1-mini-4k-instruct-Q5_K_M.gguf
     type: gguf
-  replete-qwen2.5-7b:
-    <<: *big_gpu
-    path: ~/docs/models/qwen/Replete-LLM-V2.5-Qwen-7b-Q4_K_M.gguf
+  qwen3-0.6b:
+    <<: *max_gpu
+    path: ~/docs/models/qwen/Qwen3-0.6B-UD-Q8_K_XL.gguf
     type: gguf
   gemma2-9b-atarax:
     <<: *med_gpu
@@ -80,9 +117,6 @@ models:
     <<: *small_gpu
     path: ~/docs/models/phi-3-medium-4k-instruct/Phi-3-medium-4k-instruct-Q4_K_M.gguf
     type: gguf
-  ollama-tinydolphin-latest:
-    name: tinydolphin:latest
-    type: ollama
 
 profiles:
   zero:
@@ -110,10 +144,47 @@ profiles:
     repeat_penalty: 1.15
     top_k: 30
     top_p: 0.18
+  qwen-think:
+    temperature: 0.6
+    repeat_penalty: 1.176
+    min_p: 0.0
+    top_p: 0.95
+    top_k: 20
+  qwen:
+    temperature: 0.7
+    repeat_penalty: 1.176
+    min_p: 0.01
+    top_p: 0.8
+    top_k: 20
+  jan:
+    temperature: 0.7
+    repeat_penalty: 1.176
+    top_p: 0.8
+    top_k: 20
+    min_p: 0
+  lucy:
+    temperature: 0.7
+    repeat_penalty: 1.176
+    top_p: 0.9
+    top_k: 20
+    min_p: 0
 
 chat:
-  model: qwen2.5-3b
+  # model: jan-4b
+  # profile: jan
+  # model: lucy-2b
+  # profile: lucy
+  model: kimi-k2
   profile: precise
+  # model: llamacpp-server
+  # profile: qwen-think
 task:
-  model: llamacpp-server
+  model: gemini-flash-lite
   profile: precise
+
+tools:
+  search:
+    provider: searxng
+    base_url: https://search.codito.in
+
+# vim: set foldlevel=99:

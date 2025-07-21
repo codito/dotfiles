@@ -20,6 +20,9 @@
     cst = "!f() { git commit -m \"style: $1\"; }; f"
     cte = "!f() { git commit -m \"test: $1\"; }; f"
 
+    # Clean local branches
+    cle = !git switch master && git pull --prune && git branch --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" { print $1 }' | xargs -r git branch -D
+
 [color]
     ui = auto
 [color "branch"]
@@ -41,3 +44,5 @@
     path = .gitconfig_local
 [pull]
     rebase = false
+[fetch]
+	prune = true
