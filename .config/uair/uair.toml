@@ -1,0 +1,19 @@
+loop_on_end = true
+
+[defaults]
+format = "{name} {state} {time}\n"
+# time_format = "%Mm %Ss"
+paused_state_text = "pause"
+resumed_state_text = "resume"
+
+[[sessions]]
+id = "work"
+name = "Work"
+duration = "25m"
+command = "~/.config/uair/scripts/work.sh"
+
+[[sessions]]
+id = "break"
+name = "Break"
+duration = "5m"
+command = "~/.config/uair/scripts/break.sh"
