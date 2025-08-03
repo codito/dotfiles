@@ -69,6 +69,7 @@ models:
     <<: *max_gpu
     path: ~/docs/models/jan/jan-lucy-128k-Q6_K_L.gguf
     type: gguf
+    n_ctx: 4096
   qwen3-4b:
     <<: *max_gpu
     path: ~/docs/models/qwen/Qwen3-4B-UD-Q4_K_XL.gguf
@@ -172,10 +173,10 @@ profiles:
 chat:
   # model: jan-4b
   # profile: jan
-  # model: lucy-2b
-  # profile: lucy
-  model: kimi-k2
-  profile: precise
+  model: lucy-2b
+  profile: lucy
+  # model: kimi-k2
+  # profile: precise
   # model: llamacpp-server
   # profile: qwen-think
 task:
