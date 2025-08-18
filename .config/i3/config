@@ -1,6 +1,6 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-# Last Modified: 21/07/2025, 08:28:36 +0530
+# Last Modified: 18/08/2025, 15:25:27 +0530
 #
 
 ## Modifer {{{1
@@ -193,6 +193,7 @@ bindsym $mod+Shift+p exec uairctl next
 
 ## Bar {{{1
 exec polybar primary
+exec polybar primary-task
 exec polybar secondary
 bindsym $mod+b exec polybar-msg cmd toggle
 
