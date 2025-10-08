@@ -1,13 +1,14 @@
 # ZSH env file
 # sourced for all terminals
 # Created: Sat 29 Nov 2008 12:14:40 PM IST
-# Last Modified: 03/04/2025, 16:12:01 +0530
+# Last Modified: 30/08/2025, 08:18:15 +0530
 
 export EDITOR="nvim"
 export PATH=${PATH}:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.yarn/bin:$HOME/bin
 
 # Nodejs
 #export NODE_PATH=/usr/lib/jsctags:/usr/lib/node_modules
+export NODE_OPTIONS=--max-old-space-size=8192
 
 # android setup
 if [ -d /store/src/_tools/android-sdk ]; then

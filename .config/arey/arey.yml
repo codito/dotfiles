@@ -9,6 +9,8 @@
 max_gpu: &max_gpu
   n_threads: 11
   n_gpu_layers: 99
+  n_batch: 1024
+  n_ubatch: 512
 
 # For ~7B models
 big_gpu: &big_gpu
@@ -28,7 +30,12 @@ small_gpu: &small_gpu
 # Ordered by size and favorites within same size segment
 models:
   kimi-k2:
-    name: moonshotai/kimi-k2-instruct
+    name: moonshotai/kimi-k2-instruct-0905
+    type: openai
+    base_url: https://api.groq.com/openai/v1
+    api_key: env:GROQ_API_KEY # defined as env variable
+  qwen3-32b:
+    name: qwen/qwen3-32b
     type: openai
     base_url: https://api.groq.com/openai/v1
     api_key: env:GROQ_API_KEY # defined as env variable
@@ -81,14 +88,15 @@ models:
     path: ~/docs/models/jan/jan-lucy-128k-Q6_K_L.gguf
     type: gguf
     n_ctx: 4096
-  qwen3-4b:
-    <<: *max_gpu
-    path: ~/docs/models/qwen/Qwen3-4B-UD-Q4_K_XL.gguf
-    type: gguf
   qwen2.5-3b:
     <<: *max_gpu
     path: ~/docs/models/qwen/Qwen2.5-3B-Instruct-Q5_K_L.gguf
     type: gguf
+  granite-3b:
+    <<: *max_gpu
+    path: ~/docs/models/ibm/granite-4.0-micro-UD-Q5_K_XL.gguf
+    type: gguf
+    n_ctx: 4096
   llama-3.2-3b:
     <<: *max_gpu
     path: ~/docs/models/llama/Llama-3.2-3B-Instruct-Q5_K_L.gguf
@@ -105,9 +113,9 @@ models:
     <<: *max_gpu
     path: ~/docs/models/qwen/Qwen3-0.6B-UD-Q8_K_XL.gguf
     type: gguf
-  granite3-8b:
+  granite-8b:
     <<: *big_gpu
-    path: ~/docs/models/ibm/granite-3.3-8b-instruct-UD-Q4_K_XL.gguf
+    path: ~/docs/models/ibm/granite-4.0-h-tiny-UD-Q4_K_XL.gguf
     type: gguf
     n_ctx: 4096
   gemma2-9b-atarax:
@@ -186,6 +194,12 @@ profiles:
     top_p: 0.9
     top_k: 20
     min_p: 0
+  granite:
+    temperature: 1.0
+    repeat_penalty: 1.176
+    top_k: 0
+    top_p: 1.0
+    min_p: 0
 
 chat:
   # model: granite3-8b
@@ -194,10 +208,10 @@ chat:
   # profile: qwen
   # model: jan-4b
   # profile: jan
-  model: lucy-2b
-  profile: lucy
-  # model: kimi-k2
-  # profile: precise
+  # model: lucy-2b
+  # profile: lucy
+  model: kimi-k2
+  profile: precise
   # model: llamacpp-server
   # profile: qwen-think
 task:
@@ -208,5 +222,4 @@ tools:
   search:
     provider: searxng
     base_url: https://search.codito.in
-
 # vim: set foldlevel=99:
