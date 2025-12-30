@@ -1,0 +1,14 @@
+# This is the configuration file for Ghostty. See https://ghostty.org/docs/config.
+#
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Ctrl+Shift+, will reload configuration.
+font-family = Iosevka Nerd Font Mono
+font-size = 14
+
+theme = Catppuccin Frappe
+
+window-decoration = none
+
+auto-update = off

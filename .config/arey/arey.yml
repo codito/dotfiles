@@ -29,11 +29,18 @@ small_gpu: &small_gpu
 
 # Ordered by size and favorites within same size segment
 models:
+  gemini-pro:
+    name: gemini-3-pro
+    type: openai
+    base_url: https://generativelanguage.googleapis.com/v1beta/openai
+    api_key: env:GEMINI_API_KEY
+    n_ctx: 1048576
   kimi-k2:
     name: moonshotai/kimi-k2-instruct-0905
     type: openai
     base_url: https://api.groq.com/openai/v1
     api_key: env:GROQ_API_KEY # defined as env variable
+    n_ctx: 262144
   qwen3-32b:
     name: qwen/qwen3-32b
     type: openai
@@ -49,11 +56,13 @@ models:
     type: openai
     base_url: https://generativelanguage.googleapis.com/v1beta/openai
     api_key: env:GEMINI_API_KEY
+    n_ctx: 1048576
   gemini-flash-lite:
-    name: gemini-2.5-flash-lite-preview-06-17
+    name: gemini-2.5-flash-lite
     type: openai
     base_url: https://generativelanguage.googleapis.com/v1beta/openai
     api_key: env:GEMINI_API_KEY
+    n_ctx: 1048576
   or-kimi-k2:
     name: moonshotai/kimi-k2:free
     type: openai
@@ -68,6 +77,11 @@ models:
     name: gemma2-9b-it-sppo-iter3
     type: openai
     base_url: "http://localhost:8080"
+  qwen-8b-instruct:
+    <<: *big_gpu
+    path: ~/docs/models/qwen/Qwen3-8B-UD-Q4_K_XL.gguf
+    type: gguf
+    n_ctx: 4096
   qwen-4b-instruct:
     <<: *max_gpu
     path: ~/docs/models/qwen/Qwen3-4B-Instruct-2507-UD-Q4_K_XL.gguf
@@ -217,6 +231,8 @@ chat:
 task:
   model: gemini-flash-lite
   profile: precise
+
+theme: dark
 
 tools:
   search:

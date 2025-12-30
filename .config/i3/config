@@ -1,6 +1,6 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-# Last Modified: 08/10/2025, 19:11:45 +0530
+# Last Modified: 25/12/2025, 15:03:34 +0530
 #
 
 ## Modifer {{{1
@@ -17,12 +17,12 @@ floating_modifier $mod
 # font pango:Delugia 10
 font pango:Iosevka Aile 10
 # Do not use borders for windows or floats
-# default_border pixel 2px
-default_border none
+default_border pixel 2px
+# default_border none
 default_floating_border none
 
 # Hide edge borders if one window, enable otherwise
-# hide_edge_borders smart
+hide_edge_borders smart
 
 ## Window Management {{{1
 # Do not move mouse to center of window on focus
@@ -124,9 +124,9 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # make the currently focused window a scratchpad
-bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+Shift+\ move scratchpad
 # show the first scratchpad window
-bindsym $mod+minus scratchpad show
+bindsym $mod+\ scratchpad show
 # show the notes scratchpad window, if any
 bindsym $mod+n [title="GVIM$"] scratchpad show
 
@@ -204,7 +204,7 @@ exec --no-startup-id picom -CGb
 
 ## Other startup apps {{{1
 exec --no-startup-id pcmanfm --daemon-mode
-exec gammastep-indicator &
+# exec gammastep-indicator &
 # exec blueman-applet &
 exec --no-startup-id dex --autostart --environment i3
 
