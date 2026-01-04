@@ -1,4 +1,4 @@
-@import "catppuccin-frappe"
+@import "catppuccin-mocha"
 
 * {
   selected-active-foreground:  @background;

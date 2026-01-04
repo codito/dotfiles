@@ -1,6 +1,6 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-# Last Modified: 25/12/2025, 15:03:34 +0530
+# Last Modified: 04/01/2026, 06:48:44 +0530
 #
 
 ## Modifer {{{1
@@ -209,6 +209,6 @@ exec --no-startup-id pcmanfm --daemon-mode
 exec --no-startup-id dex --autostart --environment i3
 
 ## Theme {{{1
-include $HOME/.config/i3/themes/catppuccin-frappe.ini
+include $HOME/.config/i3/themes/catppuccin-mocha.ini
 
 # vim: set tw=999:
