@@ -41,18 +41,26 @@ models:
     base_url: https://api.groq.com/openai/v1
     api_key: env:GROQ_API_KEY # defined as env variable
     n_ctx: 262144
-  qwen3-32b:
-    name: qwen/qwen3-32b
+  gpt-oss-120b:
+    name: gpt-oss-120b
     type: openai
-    base_url: https://api.groq.com/openai/v1
-    api_key: env:GROQ_API_KEY # defined as env variable
-  llama-70b:
-    name: llama-3.3-70b-versatile
+    base_url: https://api.cerebras.ai/v1
+    api_key: env:CEREBRAS_API_KEY
+    n_ctx: 65536
+  qwen3-235b:
+    name: qwen-3-235b-a22b-instruct-2507
     type: openai
-    base_url: https://api.groq.com/openai/v1
-    api_key: env:GROQ_API_KEY # defined as env variable
+    base_url: https://api.cerebras.ai/v1
+    api_key: env:CEREBRAS_API_KEY
+    n_ctx: 65536
+  zai-glm:
+    name: zai-glm-4.6
+    type: openai
+    base_url: https://api.cerebras.ai/v1
+    api_key: env:CEREBRAS_API_KEY
+    n_ctx: 64000
   gemini-flash:
-    name: gemini-2.5-flash
+    name: gemini-3.0-flash
     type: openai
     base_url: https://generativelanguage.googleapis.com/v1beta/openai
     api_key: env:GEMINI_API_KEY
@@ -84,7 +92,7 @@ models:
     n_ctx: 4096
   qwen-4b-instruct:
     <<: *max_gpu
-    path: ~/docs/models/qwen/Qwen3-4B-Instruct-2507-UD-Q4_K_XL.gguf
+    path: ~/docs/models/qwen/Qwen3-4B-Instruct-2507-IQ4_XS-4.54bpw.gguf
     type: gguf
     n_ctx: 4096
   qwen-4b-think:
@@ -102,10 +110,11 @@ models:
     path: ~/docs/models/jan/jan-lucy-128k-Q6_K_L.gguf
     type: gguf
     n_ctx: 4096
-  qwen2.5-3b:
+  lfm2.5-1.2b:
     <<: *max_gpu
-    path: ~/docs/models/qwen/Qwen2.5-3B-Instruct-Q5_K_L.gguf
+    path: ~/docs/models/lfm/LFM2.5-1.2B-Instruct-UD-Q8_K_XL.gguf
     type: gguf
+    n_ctx: 4096
   granite-3b:
     <<: *max_gpu
     path: ~/docs/models/ibm/granite-4.0-micro-UD-Q5_K_XL.gguf

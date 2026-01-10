@@ -1,7 +1,7 @@
 # ZSH env file
 # sourced for all terminals
 # Created: Sat 29 Nov 2008 12:14:40 PM IST
-# Last Modified: 30/08/2025, 08:18:15 +0530
+# Last Modified: 07/01/2026, 19:38:04 +0530
 
 export EDITOR="nvim"
 export PATH=${PATH}:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.yarn/bin:$HOME/bin
@@ -25,6 +25,10 @@ export AIDER_ANALYTICS_DISABLE=true
 
 export WLR_RENDERER=vulkan
 export HF_HOME=$HOME/.local/share/huggingface
+
+# Webkit gtk view workaround. Needed for Tauri apps like en-croissant
+# https://github.com/tauri-apps/tauri/issues/13493
+export WEBKIT_DISABLE_DMABUF_RENDERER=1
 
 # Create virtual env at .venv dir
 export PYTHON_VENV_NAME=.venv

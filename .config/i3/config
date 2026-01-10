@@ -1,6 +1,6 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-# Last Modified: 04/01/2026, 06:48:44 +0530
+# Last Modified: 10/01/2026, 18:52:00 +0530
 #
 
 ## Modifer {{{1
@@ -44,6 +44,7 @@ bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
 bindsym $mod+r exec "rofi -show combi"
+bindsym $mod+c exec "rofi -show calc -modi calc -no-show-match -no-sort"
 
 # change focus
 bindsym $mod+h focus left
