@@ -46,3 +46,5 @@
     rebase = false
 [fetch]
 	prune = true
+[diff]
+	guitool = meld

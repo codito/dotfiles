@@ -1,6 +1,6 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-# Last Modified: 10/01/2026, 18:52:00 +0530
+# Last Modified: 25/11/2026, 20:13:57 +0530
 #
 
 ## Modifer {{{1
@@ -189,8 +189,10 @@ bindsym XF86AudioPlay           exec mpc toggle >/dev/null && notify-send -a "Mu
 bindsym XF86Calculator          exec mpc next >/dev/null && notify-send -a "Music" "$(mpc --format '[[%artist% - ]%title%]|[%file%] #| %time%' | head -n1)" -i notification-audio-next -t 1000
 
 # Pomodoro Keys
-bindsym $mod+p exec uairctl toggle
-bindsym $mod+Shift+p exec uairctl next
+bindsym $mod+p exec --no-startup-id rofi-rbw --clear-after 10
+
+# Waydroid
+bindsym $mod+u exec weston --shell=kiosk-shell.so -- waydroid show-full-ui
 
 ## Bar {{{1
 exec polybar primary
