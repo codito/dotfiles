@@ -1,7 +1,7 @@
 # ZSH env file
 # sourced for all terminals
 # Created: Sat 29 Nov 2008 12:14:40 PM IST
-# Last Modified: 07/01/2026, 19:38:04 +0530
+# Last Modified: 26/11/2026, 10:12:58 +0530
 
 export EDITOR="nvim"
 export PATH=${PATH}:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.yarn/bin:$HOME/bin
@@ -32,5 +32,8 @@ export WEBKIT_DISABLE_DMABUF_RENDERER=1
 
 # Create virtual env at .venv dir
 export PYTHON_VENV_NAME=.venv
+
+# SSH
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/rbw/ssh-agent-socket"
 
 source ~HOME/.config/.env

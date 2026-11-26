@@ -1,6 +1,6 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-# Last Modified: 25/11/2026, 20:13:57 +0530
+# Last Modified: 26/11/2026, 10:37:36 +0530
 #
 
 ## Modifer {{{1
@@ -188,7 +188,7 @@ bindsym Shift+XF86AudioStop     exec notify-send -a "Music" "$(mpc --format '[[%
 bindsym XF86AudioPlay           exec mpc toggle >/dev/null && notify-send -a "Music" "$(mpc --format '[[%artist% - ]%title%]|[%file%] #| %time%' | head -n1)" -i notification-audio-play -t 1000
 bindsym XF86Calculator          exec mpc next >/dev/null && notify-send -a "Music" "$(mpc --format '[[%artist% - ]%title%]|[%file%] #| %time%' | head -n1)" -i notification-audio-next -t 1000
 
-# Pomodoro Keys
+# Bitwarden
 bindsym $mod+p exec --no-startup-id rofi-rbw --clear-after 10
 
 # Waydroid

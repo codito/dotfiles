@@ -24,7 +24,7 @@ ZSH_THEME="juanghurtado"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git vi-mode archlinux ssh-agent dotenv autojump python rust)
+plugins=(git vi-mode archlinux rbw dotenv autojump python rust)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -36,4 +36,7 @@ if command -v starship &> /dev/null; then
 fi
 if command -v mcfly &> /dev/null; then
     eval "$(mcfly init zsh)"
+fi
+if command -v rbw &> /dev/null; then
+    [[ -o interactive ]] && { rbw unlocked || rbw unlock }
 fi
